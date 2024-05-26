@@ -1,0 +1,293 @@
+/*
+palette: 
+blacks: 
+    1: rgb(55, 55, 55)
+    2: rgb(77, 77, 77)
+    3: rgb(100, 100, 100)
+
+oranges: 
+    1: rgb(236, 119, 23)
+    2: rgba(247, 174, 79, 0.685) / fade rgba(247, 174, 79, 0.150)
+    3: rgb(248, 232, 197)
+*/
+
+
+/*special border type
+
+padding: 5px 10px;
+border-radius: 10px;
+border: 2px solid rgba(236, 119, 23, 1);
+background-color: rgba(247, 174, 79, 0.150);
+transition: ease 0.2s;
+cursor: pointer;
+*/
+
+
+html {
+    user-select: none;
+    cursor: default;
+}
+
+body {
+    font-family: Rubik;
+    background-color: rgb(248, 232, 197);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    & .recherche {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        align-items: center;
+        gap: 5px;
+        & img {
+            height: 25px;
+        }
+        & .main {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2px;
+            padding: 2px;
+            border-radius: 90px;
+            width: 50%;
+            border: 2px solid rgba(236, 119, 23, 0);
+            background-color: rgb(55, 55, 55);
+            & img {
+                font-size: large;
+                color: aliceblue;
+
+                /*special*/
+                padding: 7px;
+                border: 2px solid rgba(70, 70, 70, 0.6);
+                border-radius: 90px;
+                cursor: pointer;
+                &:hover {
+                    /*special*/
+                    border: 2px solid rgba(121, 121, 121, 0.6);
+                }
+            }
+            & input {
+                padding: 8px 15px;
+                border: none;
+                outline: none;
+                background-color: #00000000;
+                font-size: large;
+                color: aliceblue;
+                width: 100%;
+                border-radius: 90px;
+
+                /*special*/
+                border: 2px solid rgba(70, 70, 70, 0.6);
+                transition: ease 0.3s;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                &:focus {
+                    /*special*/
+                    border: 2px solid rgba(121, 121, 121, 0.6);
+                }
+            }
+            & .more {
+                font-size: large;
+                font-weight: 500;
+                color: rgb(236, 119, 23);
+
+                /*special*/
+                padding: 8px 15px;
+                border: 2px solid rgba(70, 70, 70, 0.6);
+                border-radius: 90px;
+                cursor: pointer;
+                &:hover {
+                    /*special*/
+                    border: 2px solid rgba(121, 121, 121, 0.6);
+                }
+            }
+        }
+        & .filtre {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2px;
+            padding: 2px;
+            border-radius: 90px;
+            width: 45%;
+            border: 2px solid rgba(236, 119, 23, 0);
+            background-color: rgb(55, 55, 55);
+            & .carousel {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                gap: 5px;
+                & .cat {
+                    font-size: medium;
+                    font-weight: 500;
+                    color: rgb(236, 119, 23);
+
+                    /*special*/
+                    padding: 9px 15px;
+                    border: 2px solid rgba(70, 70, 70, 0.6);
+                    border-radius: 90px;
+                    &:hover {
+                        /*special*/
+                        border: 2px solid rgba(121, 121, 121, 0.6);
+                    }
+                }
+            }
+            & .moreFilters {
+                font-size: large;
+                font-weight: 500;
+                color: rgb(236, 119, 23);
+
+                /*special*/
+                padding: 8px 15px;
+                border: 2px solid rgba(70, 70, 70, 0.6);
+                border-radius: 90px;
+                &:hover {
+                    /*special*/
+                    border: 2px solid rgba(121, 121, 121, 0.6);
+                }
+            }
+        }
+    }
+
+    & .mainBar {
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & img {
+            height: 25px;
+        }
+        & .buttons {
+            transform: translateY(25px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+            background-color: rgb(55, 55, 55);
+            border-radius: 25px;
+            border: 2px solid rgb(100, 100, 100);
+            box-shadow: 0 0 15px black;
+            font-size: larger;
+            color:rgb(236, 119, 23);
+            font-weight: 500;
+            padding: 1px;
+            & .button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+
+                /*special*/
+                border: 2px solid rgba(236, 119, 23, 0);
+                padding: 7px 13px;
+                border-radius: 22px;
+                transition: ease 0.2s;
+                &:hover {
+                    /*special*/
+                    border: 2px solid rgba(236, 119, 23, 1);
+                    background-color: rgba(247, 174, 79, 0.150);
+                    transition: ease 0.2s;
+                    cursor: pointer;
+                }
+            }
+            & .gapper {
+                position: relative;
+                height: 30px;
+                padding: 1px;
+                border-radius: 90px;
+                background-color: rgb(100, 100, 100);
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+        }
+        & .buttonsBar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(55, 55, 55);
+            & .alignLeft, .alignRight { 
+                & .btn {
+                    margin: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 2px;
+
+                    /*special*/
+                    padding: 3px 7px;
+                    border-radius: 15px;
+                    border: 2px solid rgba(236, 155, 48, 0);
+                    background-color: rgba(247, 174, 79, 0);
+                    transition: ease 0.2s;
+
+                    & .text {
+                        font-size: small;
+                        color: rgb(236, 119, 23);
+                        font-weight: 500;
+                    }
+                    &:hover {
+                        /*special*/
+                        padding: 3px 7px;
+                        border-radius: 10px;
+                        border: 2px solid rgba(236, 119, 23, 1);
+                        background-color: rgba(247, 174, 79, 0.150);
+                        transition: ease 0.2s;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (width < 800px) {
+    body {
+        & .recherche {
+            & .main {
+                width: 65%;
+            }
+        }
+    }
+}
+
+@media screen and (width < 440px) {
+    body {
+        & .recherche {
+            & .main {
+                width: 90%;
+            }
+        }
+        & .mainBar {
+            & img {
+                height: 40px;
+            }
+            & .button {
+                & .text {
+                    display: none;
+                }
+            }
+            & .gapper {
+                margin-right: 5px;
+                margin-left: 5px;
+            }
+            & .buttonsBar {
+                & .alignLeft, .alignRight { 
+                    & .btn {
+                        & .text {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

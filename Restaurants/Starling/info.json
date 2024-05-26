@@ -1,0 +1,36 @@
+{
+    "description": "Starling, c'est un restaurant qui réserve des surprises à chaque coin de table. L'atmosphère chaleureuse et conviviale crée une toile de fond parfaite pour découvrir une cuisine durable et de première qualité. Dès le premier regard, la promesse de plats délicieux est évidente.<br><br>Le restaurant Starling se démarque par son engagement envers des pratiques durables, et cette approche se ressent dans chaque plat. Des ingrédients de qualité sont méticuleusement assemblés pour créer des saveurs qui captivent les papilles. La simplicité et l'attention aux détails caractérisent une cuisine qui impressionne dès la première bouchée.<br><br>En résumé, Starling ne se contente pas d'offrir un repas, mais plutôt une expérience culinaire qui éveille les sens. Pour ceux qui apprécient la bonne nourriture, l'ambiance agréable et une touche de durabilité, ce restaurant promet une escapade gustative inoubliable.",
+    "website": "https://www.starling-burgers.com/fr/",
+    "medal": false,
+    
+    "type": "Burger",
+    "cost": [13, 16],
+    "qa": 5,
+    "rqp": 5,
+    
+    "enligne": {},
+    "darkkitchen": false,
+    "localisation": [
+        {
+            "visited": true,
+            "nom": "Centre",
+            "phone": "09 51 84 48 08",
+            "adresse": "7 rue Hannong, 67000 Strasbourg",
+            "maps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21115.167251458795!2d7.704915974316413!3d48.58311789999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c97c3dfe855b%3A0x627b045436e9af38!2sStarling%20Burgers!5e0!3m2!1sfr!2sfr!4v1708277900708!5m2!1sfr!2sfr",
+            "horaires": {
+                "Dimanche-Jeudi": "12h-14h / 18h-22h",
+                "Vendredi": "12h-14h / 18h-00h",
+                "Samedi": "12h-00h"
+            }
+        },
+        {
+            "visited": true,
+            "nom": "Kurtenau",
+            "adresse": "7 rue de l Hôpital-Militaire, 67000 Strasbourg",
+            "maps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21115.167251458795!2d7.704915974316413!3d48.58311789999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c9e521f80bf1%3A0x55dc0b359b3cd612!2sStarling%20Burgers%20Krutenau!5e0!3m2!1sfr!2sfr!4v1708277926472!5m2!1sfr!2sfr",
+            "horaires": {
+                "Lundi-Dimanche": "12h-14h / 18h-22h"
+            }
+        }
+    ]
+}
