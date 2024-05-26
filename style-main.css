@@ -34,6 +34,7 @@ body {
     position: relative;
     display: flex;
     justify-content: center;
+
     & .recherche {
         display: flex;
         flex-direction: column;
