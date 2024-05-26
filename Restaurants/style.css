@@ -1,0 +1,40 @@
+
+& .fetchCards {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    & .card {
+        display: flex;
+        flex-direction: row;
+        background-color: aqua;
+        width: 70%;
+        height: 250px;
+        gap: 5px;
+        padding: 2px;
+        border-radius: 10px;
+        & img {
+            border-radius: 8px;
+            width: 300px;
+            overflow: hidden;
+            object-fit: cover;
+            height: 250px;
+        }
+        & .decription {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            & .style-box {
+                border-radius: 8px;
+                padding: 5px 10px;
+                background-color: rgba(111, 111, 111, 0.195);
+            }
+            & .info {
+                
+            }
+        }
+    }
+}
