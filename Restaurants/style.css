@@ -9,7 +9,6 @@
     & .card {
         display: flex;
         flex-direction: row;
-        background-color: aqua;
         width: 70%;
         height: 250px;
         gap: 5px;
@@ -17,7 +16,7 @@
         border-radius: 10px;
         & img {
             border-radius: 8px;
-            width: 300px;
+            width: 400px;
             overflow: hidden;
             object-fit: cover;
             height: 250px;
@@ -31,6 +30,54 @@
                 border-radius: 8px;
                 padding: 5px 10px;
                 background-color: rgba(111, 111, 111, 0.195);
+            }
+            & .info {
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                padding: 0px !important;
+                & span {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 20px;
+                }
+                & .title {
+                    margin: 5px 10px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 15px;
+                    & .text {
+                        font-weight: 600;
+                        font-size: x-large;
+                    }
+                    & .online {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 10px;
+                    }
+                    & .access {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 10px;
+                    }
+                }
+                & .more {
+                    display: flex;
+                    flex-direction: row;
+                    & .note {
+                        background-color: rgba(0, 0, 0, 0.065);
+                        border-radius: 0 10px 0 0;
+                        padding: 0 4px;
+                        & img {
+                            height: 30px;
+                            width: 30px;
+                            transform: translateY(2px);
+                        }
+                    }
+                }
             }
         }
     }
