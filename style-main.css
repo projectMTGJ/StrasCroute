@@ -150,6 +150,9 @@ body {
                 padding: 7px 13px;
                 border-radius: 22px;
                 transition: ease 0.2s;
+                & .text {
+                    transform: translateY(1px);
+                }
                 &:hover {
                     /*special*/
                     border: 2px solid rgba(236, 119, 23, 1);
