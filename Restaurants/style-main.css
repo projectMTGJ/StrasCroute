@@ -1,3 +1,28 @@
+/*
+palette: 
+blacks: 
+    1: rgb(55, 55, 55)
+    2: rgb(77, 77, 77)
+    3: rgb(100, 100, 100)
+
+oranges: 
+    1: rgb(236, 119, 23)
+    2: rgba(247, 174, 79, 0.685) / fade rgba(247, 174, 79, 0.150)
+    3: rgb(248, 232, 197)
+*/
+
+
+/*special border type
+
+padding: 5px 10px;
+border-radius: 10px;
+border: 2px solid rgba(236, 119, 23, 1);
+background-color: rgba(247, 174, 79, 0.150);
+transition: ease 0.2s;
+cursor: pointer;
+*/
+
+
 html {
     user-select: none;
     cursor: default;
@@ -203,7 +228,7 @@ body {
         }
         & .mainBar {
             & img {
-                height: 40px;
+                height: 30px;
             }
             & .button {
                 & .text {
