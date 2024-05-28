@@ -36,11 +36,14 @@
                 flex-direction: column;
                 overflow: hidden;
                 padding: 0px !important;
+                justify-content: space-between;
+                height: fit-content;
+                margin-bottom: 5px;
                 & span {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    gap: 20px;
+                    gap: 10px;
                 }
                 & .title {
                     margin: 5px 10px;
@@ -48,7 +51,6 @@
                     flex-direction: row;
                     align-items: center;
                     justify-content: space-between;
-                    gap: 15px;
                     & .text {
                         font-weight: 600;
                         font-size: x-large;
@@ -56,17 +58,48 @@
                     & .online {
                         display: flex;
                         flex-direction: row;
-                        gap: 10px;
+                        gap: 2px;
+                        & img {
+                            height: 25px;
+                            width: auto;
+                            border: 2px solid rgba(236, 119, 23, 0);
+                            padding: 1px;
+                            border-radius: 10px;
+                            transition: ease 0.2s;
+                            &:hover {
+                                /*special*/
+                                border: 2px solid rgba(236, 119, 23, 1);
+                                background-color: rgba(247, 174, 79, 0.150);
+                                transition: ease 0.2s;
+                                cursor: pointer;
+                            }
+                        }
                     }
                     & .access {
                         display: flex;
                         flex-direction: row;
-                        gap: 10px;
+                        gap: 5px;
+                        & img {
+                            height: 25px;
+                            width: auto;
+                            border: 2px solid rgba(236, 119, 23, 0);
+                            padding: 3px;
+                            border-radius: 10px;
+                            transition: ease 0.2s;
+                            &:hover {
+                                /*special*/
+                                border: 2px solid rgba(236, 119, 23, 1);
+                                background-color: rgba(247, 174, 79, 0.150);
+                                transition: ease 0.2s;
+                                cursor: pointer;
+                            }
+                        }
                     }
                 }
                 & .more {
                     display: flex;
                     flex-direction: row;
+                    gap: 5px;
                     & .note {
                         background-color: rgba(0, 0, 0, 0.065);
                         border-radius: 0 10px 0 0;
@@ -77,7 +110,23 @@
                             transform: translateY(2px);
                         }
                     }
+                    & .typed {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 5px;
+                        & div {
+                            border-radius: 10px;
+                            padding: 4px 10px;
+                            background-color: rgba(0, 0, 0, 0.065);
+                            font-size: medium;
+                            font-weight: 500;
+                        }
+                    }
                 }
+            }
+            & .location {
+                height: calc(62.5%);
             }
         }
     }
