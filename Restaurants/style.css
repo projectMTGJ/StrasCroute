@@ -20,6 +20,11 @@
             overflow: hidden;
             object-fit: cover;
             height: 250px;
+            transition: ease 0.2s;
+            &:hover {
+                transform: scale(1.02);
+                border-radius: 14px;
+            }
         }
         & .decription {
             display: flex;
@@ -29,7 +34,7 @@
             & .style-box {
                 border-radius: 8px;
                 padding: 5px 10px;
-                background-color: rgba(111, 111, 111, 0.195);
+                background: linear-gradient(90deg, rgba(111, 111, 111, 0.195), rgba(111, 111, 111, 0.040));
             }
             & .info {
                 display: flex;
@@ -122,7 +127,7 @@
                             flex-direction: row;
                             align-items: center;
                             border-radius: 10px;
-                            padding: 4px 10px;
+                            padding: 4px 6px;
                             background-color: rgba(0, 0, 0, 0.065);
                             font-size: medium;
                             font-weight: 500;
@@ -130,6 +135,7 @@
                         & img {
                             height: 20px;
                             width: auto;
+                            margin-right: 4px;
                         }
                     }
                 }
@@ -143,33 +149,67 @@
                 gap: 3px;
                 & .box {
                     display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    height: 100%;
-                    width: 200px;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    height: calc(100% - 4px);
+                    width: 400px;
                     background-color: rgba(0, 0, 0, 0.1);
                     border-radius: 6px;
-                    padding: 2px;
-                    & .name {
-
+                    padding: 3px;
+                    & iframe {
+                        width: 50%;
+                        border: none;
+                        border-radius: 4px;
+                        &:active {
+                            border: none;
+                        }
                     }
-                    & .adresse {
-
-                    }
-                    & img {
-                        height: 20px;
-                        width: auto;
-                        border: 2px solid rgba(236, 119, 23, 0.1);
-                        background-color: rgba(247, 174, 79, 0.035);
-                        padding: 3px;
-                        border-radius: 10px;
-                        transition: ease 0.2s;
-                        &:hover {
-                            /*special*/
-                            border: 2px solid rgba(236, 119, 23, 1);
-                            background-color: rgba(247, 174, 79, 0.150);
+                    & .info {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        height: 100%;
+                        margin-left: 10px;
+                        width: 100%;
+                        & .name {
+                            font-size: larger;
+                            font-weight: 500;
+                        }
+                        & .adresse, .name {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            gap: 5px;
+                            border-radius: 10px;
                             transition: ease 0.2s;
-                            cursor: pointer;
+                            & .imag {
+                                height: 0px;
+                                width: auto;
+                                padding: 0px;
+                                border: none;
+                                cursor: default;
+                            }
+                            &:hover {
+                                & .imag {
+                                    height: 15px;
+                                }
+                            }
+                        }
+                        & img {
+                            height: 20px;
+                            width: auto;
+                            border: 2px solid rgba(236, 119, 23, 0.1);
+                            background-color: rgba(247, 174, 79, 0.035);
+                            padding: 3px;
+                            border-radius: 10px;
+                            transition: ease 0.2s;
+                            &:hover {
+                                /*special*/
+                                border: 2px solid rgba(236, 119, 23, 1);
+                                background-color: rgba(247, 174, 79, 0.150);
+                                transition: ease 0.2s;
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
