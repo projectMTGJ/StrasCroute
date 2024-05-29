@@ -139,3 +139,38 @@ body {
         }
     }
 }
+
+@media screen and (width < 1100px) {
+    body {
+        & .auth {
+            & .contain {
+                height: 60%;
+                width: 90%;
+                & img {
+                    height: 150px;
+                }
+                & fieldset {
+                    width: 80%;
+                    & input {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+        & .container {
+            height: 80vh;
+            & .title {
+                font-size: 50px;
+            }
+            & .options {
+                width: 100%;
+                align-items: center;
+                flex-direction: column;
+                gap: 50px;
+                & .option {
+                    width: 60%;
+                }
+            }
+        }
+    }
+}
