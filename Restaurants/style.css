@@ -1,6 +1,5 @@
-
 & .fetchCards {
-    margin-top: 60px;
+    margin-top: 53px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +21,7 @@
             height: 250px;
             transition: ease 0.2s;
             &:hover {
-                transform: scale(1.02);
+                transform: scale(1.03);
                 border-radius: 14px;
             }
         }
@@ -209,6 +208,198 @@
                                 background-color: rgba(247, 174, 79, 0.150);
                                 transition: ease 0.2s;
                                 cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (width < 1260px) {
+    & .fetchCards {
+        & .card {
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (width < 1105px) {
+    & .fetchCards {
+        & .card {
+            width: 90% !important;
+        }
+    }
+}
+
+@media screen and (width < 985px) {
+    & .fetchCards {
+        & .card {
+            display: flex;
+            flex-direction: row;
+            width: 70%;
+            height: 200px;
+            gap: 5px;
+            padding: 2px;
+            border-radius: 10px;
+            & img {
+                height: 200px;
+                width: 300px;
+            }
+            & .decription {
+                & .info {
+                    display: flex;
+                    flex-direction: column;
+                    overflow: hidden;
+                    padding: 0px !important;
+                    justify-content: space-between;
+                    height: 100%;
+                    margin-bottom: 0px;
+                    & span {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                    & .title {
+                        margin: 5px 10px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        & .text {
+                            font-weight: 600;
+                            font-size: x-large;
+                        }
+                        & .online {
+                            display: none;
+                        }
+                        & .access {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 5px;
+                            transform: translateX(5px);
+                            & img {
+                                height: 25px;
+                                width: auto;
+                                border: 2px solid rgba(236, 119, 23, 0.1);
+                                background-color: rgba(247, 174, 79, 0.035);
+                                padding: 3px;
+                                border-radius: 10px;
+                                transition: ease 0.2s;
+                                &:hover {
+                                    /*special*/
+                                    border: 2px solid rgba(236, 119, 23, 1);
+                                    background-color: rgba(247, 174, 79, 0.150);
+                                    transition: ease 0.2s;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                    & .more {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 5px;
+                        & .note {
+                            background-color: rgba(0, 0, 0, 0.065);
+                            border-radius: 0 10px 0 0;
+                            padding: 0 4px;
+                            & img {
+                                height: 30px;
+                                width: 30px;
+                                transform: translateY(2px);
+                            }
+                        }
+                        & .typed {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            gap: 5px;
+                            & .boxed {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                border-radius: 10px;
+                                padding: 4px 6px;
+                                background-color: rgba(0, 0, 0, 0.065);
+                                font-size: medium;
+                                font-weight: 500;
+                                width: fit-content;
+                            }
+                            & img {
+                                height: 20px;
+                                width: auto;
+                                margin-right: 4px;
+                            }
+                        }
+                    }
+                }
+                & .localisation {
+                    display: none;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 5px 3px;
+                    height: calc(62.5%);
+                    gap: 3px;
+                    & .box {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-evenly;
+                        height: calc(100% - 4px);
+                        width: 200px;
+                        background-color: rgba(0, 0, 0, 0.1);
+                        border-radius: 6px;
+                        padding: 3px;
+                        & iframe {
+                            display: none;
+                        }
+                        & .info {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-evenly;
+                            height: 100%;
+                            width: 100%;
+                            & .name {
+                                font-size: larger;
+                                font-weight: 500;
+                            }
+                            & .adresse, .name {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                gap: 5px;
+                                border-radius: 10px;
+                                transition: ease 0.2s;
+                                & .imag {
+                                    height: 0px;
+                                    width: auto;
+                                    padding: 0px;
+                                    border: none;
+                                    cursor: default;
+                                }
+                                &:hover {
+                                    & .imag {
+                                        height: 15px;
+                                    }
+                                }
+                            }
+                            & img {
+                                height: 20px;
+                                width: auto;
+                                border: 2px solid rgba(236, 119, 23, 0.1);
+                                background-color: rgba(247, 174, 79, 0.035);
+                                padding: 3px;
+                                border-radius: 10px;
+                                transition: ease 0.2s;
+                                &:hover {
+                                    /*special*/
+                                    border: 2px solid rgba(236, 119, 23, 1);
+                                    background-color: rgba(247, 174, 79, 0.150);
+                                    transition: ease 0.2s;
+                                    cursor: pointer;
+                                }
                             }
                         }
                     }
