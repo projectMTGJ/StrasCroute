@@ -13,15 +13,23 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <div class="auth">
-        <img src="" alt="">
+    <div class="auth" id="authenticator">
         <div class="contain">
-            
+            <div class="text" id="bvnText">Bienvenue!</div>
+            <img id="personImage" src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/user.png" alt="UserConnect">
+            <div id="ButtonCodeSend" class="button" style="font-size: x-large;" onclick="connect.request()">Request Code</div>
+            <fieldset id="fieldSetterCode">
+                <legend>Code d'entrée</legend>
+                <input type="password" name="code" id="code"/>
+                <div class="button" style="transform: translate(-3px, -3px);" onclick="connect.check()">Connect</div>
+            </fieldset>
         </div>
     </div>
-    <div class="container">
+    <div class="container blur" id="containator">
         <div class="options">
-            <div class="option" id="add"></div>
+            <div class="option" id="add">
+                
+            </div>
             <div class="option" id="mod"></div>
             <div class="option" id="rem"></div>
         </div>
