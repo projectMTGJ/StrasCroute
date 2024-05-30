@@ -14,8 +14,7 @@
 </head>
 <body>
     <div class="auth" id="authenticator">
-        <div class="contain">
-            <div class="text" id="bvnText">Bienvenue!</div>
+        <div class="contain" id="authcontainer">
             <img id="personImage" src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/admin_panel.png" alt="UserConnect">
             <div id="ButtonCodeSend" class="button" style="font-size: x-large;" onclick="connect.request()">Request Code</div>
             <fieldset id="fieldSetterCode">
@@ -27,7 +26,7 @@
     </div>
     <div class="container blur" id="containator">
         <div class="options">
-            <div class="option" id="add" onclick="connect.open()">
+            <div class="option" id="add" onclick="connect.verify()">
                 <img src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/add_resto_m.png" alt="">
                 <div class="text" style="color: rgb(19, 190, 13)">Ajout</div>
             </div>
