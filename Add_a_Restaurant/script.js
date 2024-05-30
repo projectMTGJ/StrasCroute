@@ -20,24 +20,26 @@ const connect = {
             .catch(error => alert("Il y a un problème veuillez contacter l'Administrateur"+error));
     },
     open: function(start=400) {
-        const listRem = ['fieldSetterCode','ButtonCodeSend'];
-        listRem.forEach(el => {document.getElementById(el).style = "opacity: 0;"})
+        ['fieldSetterCode','ButtonCodeSend'].forEach(el => {document.getElementById(el).style = "opacity: 0;"})
         setTimeout(() => {
-            listRem.forEach(el => {document.getElementById(el).style = "display: none;";})
+            document.getElementById('personImage').style = "transform: translateY(32%);";
         }, start+=400);
         setTimeout(() => {
-            document.getElementById('personImage').style = "border: 20px solid rgb(61, 205, 25);";
-            document.getElementById('authcontainer').style = "box-shadow: 0 0 400px rgb(61, 205, 25);";
-        }, start+=1000);
+            document.getElementById('personImage').style = "border: 0 solid rgb(61, 205, 25); border-radius: 150px; transform: translateY(32%);";
+            document.getElementById('authcontainer').style = "box-shadow: 0 0 400px rgb(61, 205, 25); background-color: rgb(61, 205, 25);";
+            document.getElementById('loadericon').style = "opacity: 1; height: 80px;";
+        }, start+=200);
         setTimeout(() => {
-            document.getElementById('personImage').style = "border: 300px solid rgb(61, 205, 25);";
-            document.getElementById('authenticator').style = "opacity: 0;";
+            document.getElementById('authenticator').style = "opacity: 0; transform: scale(1.5);";
             document.getElementById('containator').classList.remove('blur');
-        }, start+=400);
+        }, start+=2000);
         setTimeout(() => {
             document.getElementById('authenticator').style = "display: none;";
             document.getElementById('containator').classList.remove('blur');
             document.getElementById('containator').style = "z-index: 9999;";
         }, start+=400);
+    },
+    lock: function() {
+        location.reload()
     }
 }
