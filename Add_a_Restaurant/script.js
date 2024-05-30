@@ -1,6 +1,6 @@
 const connect = {
     check: function() {
-        fetch("token.json")
+        fetch("https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/Add_a_Restaurant/token.json")
             .then(response => response.json())
             .then(data => {
                 if (document.getElementById('code').value == data.passWord) {
@@ -12,7 +12,7 @@ const connect = {
             .catch(error => console.error('Error fetching the token:', error));
     },
     request: function() {
-        fetch("token.json")
+        fetch("https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/Add_a_Restaurant/token.json")
             .then(response => response.json())
             .then(data => {
                 document.getElementById('code').value = data.passWord;
@@ -39,21 +39,5 @@ const connect = {
             document.getElementById('containator').classList.remove('blur');
             document.getElementById('containator').style = "z-index: 9999;";
         }, start+=400);
-    },
-    verify: function() {
-        const currentUrl = window.location.href;
-const currentUrlObj = new URL(currentUrl);
-const currentParams = new URLSearchParams(currentUrlObj.search);
-
-// Modifier les paramètres existants ou ajouter de nouveaux paramètres
-currentParams.set('auth', 'passWord');
-
-// Mettre à jour l'URL avec les nouveaux paramètres
-        currentUrlObj.search = currentParams.toString();
-        const newUrl = currentUrlObj.toString();
-
-        console.log(newUrl); // Affiche l'URL mise à jour
-// Vous pouvez ensuite rediriger l'utilisateur vers cette nouvelle URL
-// window.location.href = newUrl;
     }
 }
