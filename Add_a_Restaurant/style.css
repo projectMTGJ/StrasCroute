@@ -100,11 +100,6 @@ body {
         align-items: center;
         justify-content: space-evenly;
         z-index: -99;
-        & .title {
-            font-size: 80px;
-            font-weight: 800;
-            color: rgb(255, 115, 0);
-        }
         & .options {
             display: flex;
             width: 70%;
@@ -158,17 +153,20 @@ body {
             }
         }
         & .container {
-            height: 80vh;
-            & .title {
-                font-size: 50px;
-            }
+            height: 100%;
+            margin-top: 50px;
+            margin-bottom: 50px;
             & .options {
                 width: 100%;
                 align-items: center;
                 flex-direction: column;
                 gap: 50px;
                 & .option {
-                    width: 60%;
+                    padding: 20px;
+                    width: 50%;
+                    & img {
+                        height: 150px;
+                    }
                 }
             }
         }
