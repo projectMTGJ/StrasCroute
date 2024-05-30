@@ -51,6 +51,7 @@ body {
                 padding-right: 2px;
                 font-weight: 500;
                 transition: ease 0.6s;
+                height: fit-content;
                 & input {
                     background-color: transparent;
                     outline: none;
