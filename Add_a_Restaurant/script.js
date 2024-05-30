@@ -45,7 +45,7 @@ const connect = {
         document.getElementById('authcontainer').style = "box-shadow: 0 0 400px rgb(255, 70, 70); background-color: rgb(155, 70, 70);";
         document.getElementById('personImage').style = "border: 4px solid rgb(255, 70, 70); border-radius: 100px;";
         endRefuse = setTimeout(() => {
-            document.getElementById('fieldSetterCode').style = "border: 2px solid aliceblue;";
+            document.getElementById('fieldSetterCode').style = "border: 2px solid rgba(178, 178, 178, 0.6);";
             document.getElementById('authcontainer').style = "box-shadow: 0 0 40px rgb(255, 128, 0); background-color: rgb(87, 87, 87);";
             document.getElementById('personImage').style = "border: 4px solid aliceblue; border-radius: 50px;";
         }, 2000);
