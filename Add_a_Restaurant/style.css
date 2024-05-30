@@ -117,7 +117,7 @@ body {
         }
     }
     & .blur {
-        filter: blur(20px);
+        filter: blur(100px);
     }
     & .container {
         top: 0px;
