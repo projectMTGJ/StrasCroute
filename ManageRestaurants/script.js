@@ -4,7 +4,7 @@ const connect = {
     joinCreatedLink: function(call) {
         const currentUrl = window.location.href;
         const currentUrlObj = new URL(currentUrl);
-        fetch("https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/Add_a_Restaurant/token.json")
+        fetch("https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/ManageRestaurants/token.json")
             .then(response => response.json())
             .then(data => {
                 window.location.replace(`${currentUrlObj}/${call}?auth=${data.passWord}`);
@@ -12,7 +12,7 @@ const connect = {
             .catch(error => alert("Il y a un problème veuillez contacter l'Administrateur"+error));
     },
     check: function() {
-        fetch("https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/Add_a_Restaurant/token.json")
+        fetch("https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/ManageRestaurants/token.json")
             .then(response => response.json())
             .then(data => {
                 if (document.getElementById('code').value == data.passWord) this.open();
@@ -21,7 +21,7 @@ const connect = {
             .catch(error => console.error('Error fetching the token:', error));
     },
     request: function() {
-        fetch("https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/Add_a_Restaurant/token.json")
+        fetch("https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/ManageRestaurants/token.json")
             .then(response => response.json())
             .then(data => {
                 document.getElementById('code').value = data.passWord;
