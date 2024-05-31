@@ -1,30 +1,48 @@
-var stuck = false;
+import { readFileSync, writeFileSync } from 'fs';
 var endRefuse;
 const connect = {
+    initiateKey: async function() {
+        try {
+            const data = JSON.parse(readFileSync('token.json', 'utf8'));
+            data.key = await this.generateKey(15);
+            writeFileSync('token.json', JSON.stringify(data, null, 2), 'utf8');
+        } catch (error) {
+            console.error("Il y a un problème veuillez contacter l'Administrateur: " + error);
+        }
+    },
+    generateKey: function(len) {
+        const letters = 'abcdefghijklmnopqrstuvwxyz';
+        let code = '';
+        for (let i = 0; i < len; i++) {
+            code += letters[Math.floor(Math.random() * letters.length)];
+        }
+        return Promise.resolve(code);
+    },
     joinCreatedLink: function(call) {
         const currentUrl = window.location.href;
         const currentUrlObj = new URL(currentUrl);
-        fetch("https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/ManageRestaurants/token.json")
+        fetch("token.json")
             .then(response => response.json())
             .then(data => {
-                window.location.replace(`${currentUrlObj}/${call}?auth=${data.passWord}`);
+                window.location.replace(`${currentUrlObj}/${call}?auth=${data.key}`);
             })
             .catch(error => alert("Il y a un problème veuillez contacter l'Administrateur"+error));
     },
     check: function() {
-        fetch("https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/ManageRestaurants/token.json")
+        fetch("token.json")
             .then(response => response.json())
             .then(data => {
-                if (document.getElementById('code').value == data.passWord) this.open();
+                if (document.getElementById('code').value == data.key) this.open();
                 else this.refuse();
             })
             .catch(error => console.error('Error fetching the token:', error));
     },
     request: function() {
-        fetch("https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/ManageRestaurants/token.json")
+        fetch("token.json")
             .then(response => response.json())
             .then(data => {
-                document.getElementById('code').value = data.passWord;
+                alert(data.key)
+                document.getElementById('code').value = data.key;
             })
             .catch(error => alert("Il y a un problème veuillez contacter l'Administrateur"+error));
     },
@@ -39,7 +57,6 @@ const connect = {
             document.getElementById('authcontainer').style = "box-shadow: 0 0 400px rgb(61, 205, 25); background-color: rgb(61, 205, 25);";
             document.getElementById('loadericon').style = "opacity: 1; height: 80px;";
         }, start+=200);
-        if (stuck === true) return;
         setTimeout(() => {
             document.getElementById('authenticator').style = "opacity: 0; transform: scale(1.5);";
             document.getElementById('containator').classList.remove('blur');

@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="style.css"/>
     <script src="script.js"></script>
 </head>
-<body>
+<body onload="connect.initiateKey()">
     <div class="auth" id="authenticator">
         <div class="contain" id="authcontainer">
             <img id="personImage" src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/admin_panel.png" alt="UserConnect">
             <div id="ButtonCodeSend" class="button" style="font-size: x-large;" onclick="connect.request()">Request Code</div>
             <fieldset id="fieldSetterCode">
                 <legend>Code d'entrée</legend>
-                <input type="password" name="code" id="code"/>
+                <input type="text" name="code" id="code"/>
                 <div class="button" style="transform: translate(-3px, -3px);" onclick="connect.check()">Connect</div>
             </fieldset>
             <div class="lds-ellipsis" id="loadericon"><div></div><div></div><div></div><div></div></div>
