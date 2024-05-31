@@ -1,0 +1,12 @@
+html {
+    user-select: none;
+    cursor: default;
+}
+
+body {
+    font-family: Rubik;
+    background-color: rgb(248, 232, 197);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
