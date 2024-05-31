@@ -43,7 +43,7 @@ const connect = {
     refuse: function() {
         document.getElementById('fieldSetterCode').style = "border: 2px solid rgba(255, 70, 70, 0.6);";
         document.getElementById('authcontainer').style = "box-shadow: 0 0 400px rgb(255, 70, 70); background-color: rgb(155, 70, 70);";
-        document.getElementById('personImage').style = "border: 4px solid rgb(255, 70, 70); border-radius: 100px;";
+        document.getElementById('personImage').style = "border: 4px solid rgb(255, 70, 70); border-radius: 160px; box-shadow: 0 0 200px rgb(255, 70, 70);";
         endRefuse = setTimeout(() => {
             document.getElementById('fieldSetterCode').style = "border: 2px solid rgba(178, 178, 178, 0.6);";
             document.getElementById('authcontainer').style = "box-shadow: 0 0 40px rgb(255, 128, 0); background-color: rgb(87, 87, 87);";
@@ -51,6 +51,6 @@ const connect = {
         }, 2000);
     },
     lock: function() {
-        location.reload()
+        location.reload();
     }
 }
