@@ -13,7 +13,17 @@
     <script src="script.js"></script>
 </head>
 <body onload="checkAuthWhenConnect()" id="bodyMain">
-    <div class="contain">
+    <div class="forceClose" id="forceCloseWindow">
+        <div class="content">
+            <div class="text">
+                <div>This session is not valid anymore.</div>
+                <div>Reason: <span class="red">Token has expired</span></div>
+            </div>
+            <img src="" alt="">
+            <div class="button" onclick="window.close()">Close</div>
+        </div>
+    </div>
+    <div class="contain" id="containMain">
 
     </div>
 </body>
