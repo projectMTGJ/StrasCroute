@@ -14,13 +14,13 @@
 </head>
 <body onload="checkAuthWhenConnect()" id="bodyMain">
     <div class="forceClose" id="forceCloseWindow">
-        <div class="content">
-            <div class="text">
-                <div>This session is not valid anymore.</div>
-                <div>Reason: <span class="red">Token has expired</span></div>
+        <div class="content" id="contentWin">
+            <div class="text" id="0">
+                <div>Cette session n'est plus valide.</div>
+                <div>Raison: <span class="red">Le token à expiré</span></div>
             </div>
-            <img src="" alt="">
-            <div class="button" onclick="window.close()">Close</div>
+            <img id="1" src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/tokenbad.png" alt="token bad">
+            <div id="2" class="button" onclick="window.close()">Close</div>
         </div>
     </div>
     <div class="contain" id="containMain">
