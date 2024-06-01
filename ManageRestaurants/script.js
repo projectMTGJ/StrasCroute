@@ -1,17 +1,17 @@
-import { readFileSync, writeFileSync } from 'fs';
 var endRefuse;
 const connect = {
     initiateKey: async function() {
         try {
-            const data = JSON.parse(readFileSync('token.json', 'utf8'));
-            data.key = await this.generateKey(15);
-            writeFileSync('token.json', JSON.stringify(data, null, 2), 'utf8');
+            const response = await fetch('token.json');
+            if (!response.ok) throw new Error('Erreur lors du chargement du fichier JSON');
+            const data = await response.json();
+            //data.key = await this.generateKey(15);
         } catch (error) {
-            console.error("Il y a un problème veuillez contacter l'Administrateur: " + error);
+            alert("Il y a un problème veuillez contacter l'Administrateur: " + error);
         }
     },
     generateKey: function(len) {
-        const letters = 'abcdefghijklmnopqrstuvwxyz';
+        const letters = '%$£µ@#&_§ABCDEFGHIJKLMNOPQRSTUVWXYZ%$£µ@#&_§abcdefghijklmnopqrstuvwxyz%$£µ@#&_§0123456789%$£µ@#&_§';
         let code = '';
         for (let i = 0; i < len; i++) {
             code += letters[Math.floor(Math.random() * letters.length)];
@@ -41,7 +41,6 @@ const connect = {
         fetch("token.json")
             .then(response => response.json())
             .then(data => {
-                alert(data.key)
                 document.getElementById('code').value = data.key;
             })
             .catch(error => alert("Il y a un problème veuillez contacter l'Administrateur"+error));
