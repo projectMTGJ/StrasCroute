@@ -7,7 +7,7 @@ var checkAuthWhenConnect = function() {
         .then(data => {
             if (currentParams.get('auth') == data.key) return;
             else {
-                //alert(data.key, currentParams.get('auth'));
+                alert(data.key+" / "+currentParams.get('auth'));
                 document.getElementById('containMain').style = "filter: blur(50px);"
                 document.getElementById('forceCloseWindow').style = "opacity: 1;"
                 document.getElementById('contentWin').style = "height: 65%; width: 35%;"
