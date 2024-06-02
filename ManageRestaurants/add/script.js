@@ -1,4 +1,4 @@
-var checkAuthWhenConnect_ = function() {
+var checkAuthWhenConnect = function() {
     const currentUrl = window.location.href;
     const currentUrlObj = new URL(currentUrl);
     const currentParams = new URLSearchParams(currentUrlObj.search);

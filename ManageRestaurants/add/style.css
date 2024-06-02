@@ -109,7 +109,7 @@ body {
             }
         }
         & fieldset {
-            border: 2px solid rgba(63, 63, 63, 0.6);
+            border: 2px solid rgba(63, 63, 63, 0.3);
             display: flex;
             align-items: center;
             border-radius: 10px;
@@ -134,7 +134,7 @@ body {
                 }
             }
             &:hover {
-                border: 2px solid rgb(236, 113, 13);
+                border: 2px solid rgba(255, 115, 0, 0.425);
             }
         }
         & input {
@@ -144,7 +144,7 @@ body {
         }
         & input[type=text] { /*haut gauche bas droite*/
             margin: 2px 10px 7px;
-            font-size: larger;
+            font-size: medium;
             font-weight: 700;
             margin-right: 5px;
             user-select: text;
@@ -154,7 +154,7 @@ body {
         }
         & input[type=url] { /*haut gauche bas droite*/
             margin: 2px 10px 7px;
-            font-size: larger;
+            font-size: medium;
             font-weight: 700;
             margin-right: 5px;
             user-select: text;
@@ -273,26 +273,61 @@ body {
             padding: 2px 6px 7px;
             width: calc(70% - 8*2px);
             gap: 5px;
+            cursor: pointer;
             & label {
                 font-size: larger;
                 width: 100%;
+                cursor: pointer;
             }
             & input[type=checkbox] {
                 height: 20px;
                 width: 20px;
+                cursor: pointer;
             }
         }
         & .shown {
             display: flex !important;
         }
+        & .shownt {
+            display: none !important;
+        }
         & #locContain {
             display: none;
+            flex-direction: column;
             width: 70%;
             justify-content: center;
             align-items: center;
+            & .addcard {
+                display: flex;
+                flex-direction: row;
+                font-size: large;
+                align-items: center;
+                gap: 10px;
+                width: fit-content;
+                margin-right: 8px;
+                margin-bottom: 8px;
+                padding: 8px 50px;
+                font-weight: 500;
+                border: 2px solid rgba(255, 147, 70, 0.2);
+                background-color: rgba(255, 147, 70, 0.035);
+                border-radius: 8px;
+                transition: ease 0.6s;
+                &:hover {
+                    /*special*/
+                    border: 2px solid rgba(255, 147, 70, 1);
+                    background-color: rgba(255, 147, 70, 0.2);
+                    transition: ease 0.2s;
+                    cursor: pointer;
+                }
+                & img {
+                    height: 20px;
+                    width: auto;
+                }
+            }
             & .spetxt {
                 display: flex;
                 flex-direction: column;
+                align-items: normal;
                 width: 100%;
                 & div {
                     width: 100%;
@@ -304,6 +339,63 @@ body {
                     border: 1.5px #5252526b solid;
                     border-radius: 6px;
                     padding: 3px 6px;
+                }
+                & .actions {
+                    display: flex;
+                    flex-direction: row;
+                    font-size: large;
+                    gap: 5px;
+                    width: fit-content;
+                    margin-left: auto;
+                    margin-right: 6px;
+                    margin-bottom: 3px;
+                    padding: 3px 5px;
+                    font-weight: 500;
+                    border: 2px solid rgba(255, 70, 70, 0.2);
+                    background-color: rgba(214, 68, 68, 0.035);
+                    border-radius: 8px;
+                    transition: ease 0.6s;
+                    transform: translateY(-3px);
+                    &:hover {
+                        /*special*/
+                        border: 2px solid rgba(255, 70, 70, 1);
+                        background-color: rgba(214, 68, 68, 0.2);
+                        transition: ease 0.2s;
+                        cursor: pointer;
+                    }
+                    & img {
+                        height: 25px;
+                        width: auto;
+                    }
+                }
+                & .hor {
+                    margin-top: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: normal;
+                    width: 100%;
+                    & div {
+                        display: flex;
+                        align-items: center;
+                        margin-left: 30px;
+                        cursor: pointer;
+                        & input[type=checkbox] {
+                            height: 20px;
+                            width: 20px;
+                            transform: translateY(-3px);
+                            cursor: pointer;
+                        }
+                        & .Horairesinputtext {
+                            display: flex;
+                            border: 1.5px #5252526b solid;
+                            border-radius: 6px;
+                            padding: 3px 6px;
+                            width: 30%;
+                        }
+                        & label {
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
             & label {
