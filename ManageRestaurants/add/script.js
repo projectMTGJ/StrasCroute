@@ -8,7 +8,7 @@ var checkAuthWhenConnect = function() {
             if (currentParams.get('auth') == data.key) return;
             else {
                 document.getElementById('containMain').style = "filter: blur(50px);"
-                document.getElementById('forceCloseWindow').style = "opacity: 1;"
+                document.getElementById('forceCloseWindow').style = "opacity: 1; z-index: 9999;"
                 document.getElementById('contentWin').style = "height: 65%; width: 35%;"
                 for (let i=0; i<=2; i++) {
                     setTimeout(() => {
@@ -22,6 +22,6 @@ var checkAuthWhenConnect = function() {
 }
 
 const alwaysCheck = setInterval(() => {
-    checkAuthWhenConnect();
+//    checkAuthWhenConnect();
 }, 10000);
 

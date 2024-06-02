@@ -2,7 +2,7 @@ var endRefuse;
 const connect = {
     initiateKey: async function() {
         try {
-            const response = await fetch('token.json');
+            const response = await fetch('https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/ManageRestaurants/token.json');
             if (!response.ok) throw new Error('Erreur lors du chargement du fichier JSON');
             //const data = await response.json();
             //data.key = await this.generateKey(15);
@@ -22,7 +22,7 @@ const connect = {
     joinCreatedLink: function(call) {
         const currentUrl = window.location.href;
         const currentUrlObj = new URL(currentUrl);
-        fetch("token.json")
+        fetch("https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/ManageRestaurants/token.json")
             .then(response => response.json())
             .then(data => {
                 window.location.replace(`${currentUrlObj}/${call}?auth=${data.key}`);
@@ -30,7 +30,7 @@ const connect = {
             .catch(error => alert("Il y a un problème veuillez contacter l'Administrateur"+error));
     },
     check: function() {
-        fetch("token.json")
+        fetch("https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/ManageRestaurants/token.json")
             .then(response => response.json())
             .then(data => {
                 if (document.getElementById('code').value == data.key) this.open();
@@ -39,7 +39,7 @@ const connect = {
             .catch(error => console.error('Error fetching the token:', error));
     },
     request: function() {
-        fetch("token.json")
+        fetch("https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/ManageRestaurants/token.json")
             .then(response => response.json())
             .then(data => {
                 document.getElementById('code').value = data.key;

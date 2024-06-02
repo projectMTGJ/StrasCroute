@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css"/>
     <script src="script.js"></script>
 </head>
-<body onload="checkAuthWhenConnect()" id="bodyMain">
+<body  id="bodyMain"> <!--onload="checkAuthWhenConnect()"-->
     <div class="forceClose" id="forceCloseWindow">
         <div class="content" id="contentWin">
             <div class="text" id="0">
@@ -24,7 +24,144 @@
         </div>
     </div>
     <div class="contain" id="containMain">
-        
+
+        <div class="titleCat">
+            <div class="bef"></div>
+            <div class="name">Informations Générales</div>
+            <div class="aft"></div>
+        </div>
+        <fieldset id="name_contain">
+            <legend>Nom</legend>
+            <input type="text" name="name" id="name"/>
+        </fieldset>
+        <fieldset id="vignette_contain">
+            <legend>Image Principale</legend>
+            <input type="file" name="vignette" id="vignette"/>
+        </fieldset>
+        <fieldset id="type_contain">
+            <legend>Type</legend>
+            <input type="text" name="type" id="type"/>
+        </fieldset>
+        <fieldset id="price_contain">
+            <legend>Fourchette de prix</legend>
+            <select id="min">
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+            </select>
+            <div class="sep"></div>
+            <select id="max">
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+            </select>
+            <select id="device">
+                <option value="€">€</option>
+                <option value="$">$</option>
+            </select>
+        </fieldset>
+        <fieldset id="qualite_contain">
+            <legend>Qualité globale</legend>
+            <div class="top-values-range"><div class="val">0</div><div class="val">1</div><div class="val">2</div><div class="val">3</div><div class="val">4</div><div class="val">5</div><div class="val">6</div><div class="val">7</div><div class="val">8</div><div class="val">9</div><div class="val">10</div></div>
+            <input type="range" min="0" max="100" id="qualite" value="0">
+        </fieldset>
+        <fieldset id="qualite_contain">
+            <legend>Rapport Qualité prix Quantité</legend>
+            <div class="top-values-range"><div class="val">0</div><div class="val">1</div><div class="val">2</div><div class="val">3</div><div class="val">4</div><div class="val">5</div><div class="val">6</div><div class="val">7</div><div class="val">8</div><div class="val">9</div><div class="val">10</div></div>
+            <input type="range" min="0" max="100" id="qualite" value="0">
+        </fieldset>
+
+        <div class="titleCat">
+            <div class="bef"></div>
+            <div class="name">Informations Pratiques</div>
+            <div class="aft"></div>
+        </div>
+        <fieldset id="darkkitchen_contain">
+            <legend>Dark Kitchen</legend>
+            <input type="checkbox" name="darkkitchen" id="darkkitchen" onchange="document.getElementById('locContain').classList.toggle('shown')">
+            <label for="darkkitchen">Dark Kitchen</label>
+        </fieldset>
+        <div id="locContain" class="shown">
+
+            <fieldset id="localisation_contain1" class="spetxt">
+                <legend>Localisation n°1</legend>
+                <div>
+                    <label for="localisationNom1">Nom: </label>
+                    <input class="speinputtext" type="text" name="localisationNom1" id="localisationNom1">
+                </div>
+                <div>
+                    <label for="localisationAdresse1">Adresse: </label>
+                    <input class="speinputtext" type="text" name="localisationAdresse1" id="localisationAdresse1">
+                </div>
+                
+            </fieldset>
+
+        </div>
+
+        <div class="titleCat">
+            <div class="bef"></div>
+            <div class="name">Informations Complémentaires</div>
+            <div class="aft"></div>
+        </div>
+        <fieldset id="description_contain">
+            <legend>Description<div class="opt">(optionnel)</div></legend>
+            <textarea name="description" id="description" rows="6"></textarea>
+        </fieldset>
+        <fieldset id="website_contain">
+            <legend>Lien du Siteweb <div class="opt">(optionnel)</div></legend>
+            <input type="url" name="website" id="website"/>
+        </fieldset>
+        <fieldset id="medaille_contain">
+            <legend>Médaille</legend>
+            <input type="checkbox" name="medaille" id="medaille">
+            <label for="medaille">Médaille</label>
+        </fieldset>
     </div>
 </body>
 </html>
