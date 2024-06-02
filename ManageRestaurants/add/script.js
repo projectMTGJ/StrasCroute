@@ -14,7 +14,7 @@ var checkAuthWhenConnect = function() {
                 setTimeout(() => {
                     for (let i=0; i<=2; i++) document.getElementById(i.toString()).style = "opacity: 1;"
                 }, 1000);
-                setTimeout(() => window.close(), 5000);
+                setTimeout(() => {window.close()}, 5000);
             }
         })
         .catch(error => alert("Il y a un problème veuillez contacter l'Administrateur"+error));

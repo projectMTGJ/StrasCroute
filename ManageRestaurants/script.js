@@ -4,14 +4,15 @@ const connect = {
         try {
             const response = await fetch('token.json');
             if (!response.ok) throw new Error('Erreur lors du chargement du fichier JSON');
-            const data = await response.json();
+            //const data = await response.json();
             //data.key = await this.generateKey(15);
+            alert(await this.generateKey(15));
         } catch (error) {
             alert("Il y a un problème veuillez contacter l'Administrateur: " + error);
         }
     },
     generateKey: function(len) {
-        const letters = '%$£µ@#&_§ABCDEFGHIJKLMNOPQRSTUVWXYZ%$£µ@#&_§abcdefghijklmnopqrstuvwxyz%$£µ@#&_§0123456789%$£µ@#&_§';
+        const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789$£µ@#_§';
         let code = '';
         for (let i = 0; i < len; i++) {
             code += letters[Math.floor(Math.random() * letters.length)];
