@@ -386,7 +386,7 @@ body {
                             cursor: pointer;
                         }
                         & .Horairesinputtext {
-                            display: flex;
+                            display: none;
                             border: 1.5px #5252526b solid;
                             border-radius: 6px;
                             padding: 3px 6px;
