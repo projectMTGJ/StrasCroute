@@ -7,13 +7,14 @@ var checkAuthWhenConnect = function() {
         .then(data => {
             if (currentParams.get('auth') == data.key) return;
             else {
-                alert(data.key+" / "+currentParams.get('auth'));
                 document.getElementById('containMain').style = "filter: blur(50px);"
                 document.getElementById('forceCloseWindow').style = "opacity: 1;"
                 document.getElementById('contentWin').style = "height: 65%; width: 35%;"
-                setTimeout(() => {
-                    for (let i=0; i<=2; i++) document.getElementById(i.toString()).style = "opacity: 1;"
-                }, 1000);
+                for (let i=0; i<=2; i++) {
+                    setTimeout(() => {
+                        document.getElementById(i.toString()).style = "opacity: 1;"
+                    }, 800 + 200*i);
+                }
                 setTimeout(() => {window.close()}, 5000);
             }
         })
