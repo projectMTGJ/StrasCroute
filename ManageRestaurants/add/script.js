@@ -15,13 +15,11 @@ var checkAuthWhenConnect = function() {
                         document.getElementById(i.toString()).style = "opacity: 1;"
                     }, 800 + 200*i);
                 }
-                setTimeout(() => {window.close()}, 5000);
+                setTimeout(() => {}, 5000);
             }
         })
         .catch(error => alert("Il y a un problème veuillez contacter l'Administrateur"+error));
 }
 
-const alwaysCheck = setInterval(() => {
-//    checkAuthWhenConnect();
-}, 10000);
 
+const alwaysCheck = setInterval(() => checkAuthWhenConnect(), 10000);
