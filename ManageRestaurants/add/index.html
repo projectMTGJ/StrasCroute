@@ -154,46 +154,81 @@
                     <label for="localisationlgm1">Lien google maps: </label>
                     <input class="speinputtext" type="text" name="localisationlgm1" id="localisationlgm1">
                 </div>
+                <div class="localisationHoraires1">Horaires: </div>
                 <div class="hor">
-                    <label for="localisationHoraires1">Horaires: </label>
                     <div>
-                        <input type="checkbox" name="LundiHoraires1" id="LundiHoraires1" onchange="document.getElementById('LundiHorairesinputtext1').classList.toggle('shown')">
+                        <input type="checkbox" name="LundiHoraires1" id="LundiHoraires1" onchange="document.getElementById('LundiHorairesinputtext1').classList.toggle('showned')">
                         <label for="LundiHoraires1">Lundi</label>
-                        <input class="Horairesinputtext" type="text" name="LundiHorairesinputtext1" id="LundiHorairesinputtext1">
+                        <input class="Horairesinputtext showned" type="text" name="LundiHorairesinputtext1" id="LundiHorairesinputtext1">
                     </div>
                     <div>
-                        <input type="checkbox" name="MardiHoraires1" id="MardiHoraires1" onchange="document.getElementById('MardiHorairesinputtext1').classList.toggle('shown')">
+                        <input type="checkbox" name="MardiHoraires1" id="MardiHoraires1" onchange="document.getElementById('MardiHorairesinputtext1').classList.toggle('showned')">
                         <label for="MardiHoraires1">Mardi</label>
-                        <input class="Horairesinputtext" type="text" name="MardiHorairesinputtext1" id="MardiHorairesinputtext1">
+                        <input class="Horairesinputtext showned" type="text" name="MardiHorairesinputtext1" id="MardiHorairesinputtext1">
                     </div>
                     <div>
-                        <input type="checkbox" name="MercrediHoraires1" id="MercrediHoraires1" onchange="document.getElementById('MercrediHorairesinputtext1').classList.toggle('shown')">
+                        <input type="checkbox" name="MercrediHoraires1" id="MercrediHoraires1" onchange="document.getElementById('MercrediHorairesinputtext1').classList.toggle('showned')">
                         <label for="MercrediHoraires1">Mercredi</label>
-                        <input class="Horairesinputtext" type="text" name="MercrediHorairesinputtext1" id="MercrediHorairesinputtext1">
+                        <input class="Horairesinputtext showned" type="text" name="MercrediHorairesinputtext1" id="MercrediHorairesinputtext1">
                     </div>
                     <div>
-                        <input type="checkbox" name="JeudiHoraires1" id="JeudiHoraires1" onchange="document.getElementById('JeudiHorairesinputtext1').classList.toggle('shown')">
+                        <input type="checkbox" name="JeudiHoraires1" id="JeudiHoraires1" onchange="document.getElementById('JeudiHorairesinputtext1').classList.toggle('showned')">
                         <label for="JeudiHoraires1">Jeudi</label>
-                        <input class="Horairesinputtext" type="text" name="JeudiHorairesinputtext1" id="JeudiHorairesinputtext1">
+                        <input class="Horairesinputtext showned" type="text" name="JeudiHorairesinputtext1" id="JeudiHorairesinputtext1">
                     </div>
                     <div>
-                        <input type="checkbox" name="VendrediHoraires1" id="VendrediHoraires1" onchange="document.getElementById('VendrediHorairesinputtext1').classList.toggle('shown')"> 
+                        <input type="checkbox" name="VendrediHoraires1" id="VendrediHoraires1" onchange="document.getElementById('VendrediHorairesinputtext1').classList.toggle('showned')"> 
                         <label for="VendrediHoraires1">Vendredi</label>
-                        <input class="Horairesinputtext" type="text" name="VendrediHorairesinputtext1" id="VendrediHorairesinputtext1">
+                        <input class="Horairesinputtext showned" type="text" name="VendrediHorairesinputtext1" id="VendrediHorairesinputtext1">
                     </div>
                     <div>
-                        <input type="checkbox" name="SamediHoraires1" id="SamediHoraires1" onchange="document.getElementById('SamediHorairesinputtext1').classList.toggle('shown')">
+                        <input type="checkbox" name="SamediHoraires1" id="SamediHoraires1" onchange="document.getElementById('SamediHorairesinputtext1').classList.toggle('showned')">
                         <label for="SamediHoraires1">Samedi</label>
-                        <input class="Horairesinputtext" type="text" name="SamediHorairesinputtext1" id="SamediHorairesinputtext1">
+                        <input class="Horairesinputtext showned" type="text" name="SamediHorairesinputtext1" id="SamediHorairesinputtext1">
                     </div>
                     <div>
-                        <input type="checkbox" name="DimancheHoraires1" id="DimancheHoraires1" onchange="document.getElementById('DimancheHorairesinputtext1').classList.toggle('shown')">
+                        <input type="checkbox" name="DimancheHoraires1" id="DimancheHoraires1" onchange="document.getElementById('DimancheHorairesinputtext1').classList.toggle('showned')">
                         <label for="DimancheHoraires1">Dimanche</label>
-                        <input class="Horairesinputtext" type="text" name="DimancheHorairesinputtext1" id="DimancheHorairesinputtext1">
+                        <input class="Horairesinputtext showned" type="text" name="DimancheHorairesinputtext1" id="DimancheHorairesinputtext1">
                     </div>
                 </div>
             </fieldset>
         </div>
+        <div class="titleCat">
+            <div class="bef"></div>
+            <div class="name">Informations sur les Plats</div>
+            <div class="aft"></div>
+        </div>
+
+        <fieldset class="addCardAll" id="entreesListe">
+            <legend>Entrées</legend>
+            <div class="manageEntrees">
+                <div class="addcard">
+                    <img src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/add.png" alt="add">
+                    Ajouter une Carte des Entrées
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="addCardAll" id="platsListe">
+            <legend>Plats</legend>
+            <div class="managePlats">
+                <div class="addcard">
+                    <img src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/add.png" alt="add">
+                    Ajouter une Carte de Plats
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="addCardAll" id="dessertsListe">
+            <legend>Desserts</legend>
+            <div class="manageDesserts">
+                <div class="addcard">
+                    <img src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/add.png" alt="add">
+                    Ajouter une Carte des Desserts
+                </div>
+            </div>
+        </fieldset>
 
         <div class="titleCat">
             <div class="bef"></div>

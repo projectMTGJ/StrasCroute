@@ -288,8 +288,9 @@ body {
         & .shown {
             display: flex !important;
         }
-        & .shownt {
-            display: none !important;
+        & .showned {
+            pointer-events: none;
+            background-color: #71717154;
         }
         & #locContain {
             display: none;
@@ -368,10 +369,15 @@ body {
                         width: auto;
                     }
                 }
+                & .localisationHoraires1 {
+                    font-size: large;
+                    padding-left: 10px;
+                    margin-top: 5px;
+                }
                 & .hor {
                     margin-top: 10px;
-                    display: flex;
-                    flex-direction: column;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
                     align-items: normal;
                     width: 100%;
                     & div {
@@ -386,11 +392,10 @@ body {
                             cursor: pointer;
                         }
                         & .Horairesinputtext {
-                            display: none;
                             border: 1.5px #5252526b solid;
                             border-radius: 6px;
                             padding: 3px 6px;
-                            width: 30%;
+                            width: 50%;
                         }
                         & label {
                             cursor: pointer;
@@ -405,5 +410,40 @@ body {
                 margin-left: 10px;
             }
         }
+    }
+    & .addCardAll {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & .addcard {
+            display: flex;
+            flex-direction: row;
+            font-size: large;
+            align-items: center;
+            gap: 10px;
+            width: fit-content;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            padding: 8px 50px;
+            font-weight: 500;
+            border: 2px solid rgba(255, 147, 70, 0.2);
+            background-color: rgba(255, 147, 70, 0.035);
+            border-radius: 8px;
+            transition: ease 0.6s;
+            &:hover {
+                /*special*/
+                border: 2px solid rgba(255, 147, 70, 1);
+                background-color: rgba(255, 147, 70, 0.2);
+                transition: ease 0.2s;
+                cursor: pointer;
+            }
+            & img {
+                height: 20px;
+                width: auto;
+            }
+        }
+    }
+    & #platsListe {
+
     }
 }
