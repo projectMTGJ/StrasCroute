@@ -21,5 +21,4 @@ var checkAuthWhenConnect = function() {
         .catch(error => alert("Il y a un problème veuillez contacter l'Administrateur"+error));
 }
 
-
 const alwaysCheck = setInterval(() => checkAuthWhenConnect(), 10000);
