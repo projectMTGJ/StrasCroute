@@ -1,0 +1,13 @@
+- CREATE:
+git config --global user.name "FIRST_NAME LAST_NAME"
+git config --global user.email "MY_NAME@example.com"
+git remote add origin https://github.com/projectMTGJ/StrasCroute
+
+- DO A PUSH
+git add .
+git commit -m "Default commit"
+git push -u origin master
+
+- DO A PULL
+git clone https://github.com/projectMTGJ/StrasCroute.git
+git pull
