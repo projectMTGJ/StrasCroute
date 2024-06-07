@@ -1,6 +1,8 @@
+link: https://www.youtube.com/watch?v=shm5FdsyYts&ab_channel=DrcMind
+
 - CREATE:
 git config --global user.name "FIRST_NAME LAST_NAME"
-git config --global user.email "MY_NAME@example.com"
+git config --global user.email "gabjagmaxthi@gmail.com"
 git remote add origin https://github.com/projectMTGJ/StrasCroute
 
 - DO A PUSH
