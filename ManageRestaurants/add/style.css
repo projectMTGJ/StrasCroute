@@ -443,7 +443,41 @@ body {
             }
         }
     }
-    & #platsListe {
-
+    & #date_contain {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        user-select: none;
+        & input {
+            display: flex;
+            flex-direction: row;
+            font-size: large;
+            align-items: center;
+            width: fit-content;
+            padding: 4px 50px;
+            font-weight: 600;
+            margin-left: 3px;
+            width: 100%;
+            background-color: rgba(255, 147, 70, 0.035);
+            border-radius: 8px;
+            transition: ease 0.6s;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            border: 1.5px solid rgba(63, 63, 63, 0.6);
+            &:active {
+                border: 1.5px solid rgb(236, 113, 13); 
+            }
+        }
+        & .setdate-today {
+            background-color: #6464642f;
+            padding: 4px 22px;
+            border-radius: 8px;
+            font-size: large;
+            font-weight: 600;
+            margin-right: 3px;
+        }
     }
 }
