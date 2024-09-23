@@ -11,5 +11,6 @@ git commit -m "Default commit"
 git push -u origin master
 
 - DO A PULL
+cd chemin/vers/ton/projet
 git clone https://github.com/projectMTGJ/StrasCroute.git
 git pull
