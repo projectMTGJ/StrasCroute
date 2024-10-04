@@ -50,13 +50,10 @@ const connect = {
         endRefuse && clearTimeout(endRefuse);
         ['fieldSetterCode','ButtonCodeSend'].forEach(el => {document.getElementById(el).style = "opacity: 0;"})
         setTimeout(() => {
-            document.getElementById('personImage').style = "transform: translateY(32%);";
-        }, start+=400);
-        setTimeout(() => {
             document.getElementById('personImage').style = "border: 0 solid rgb(61, 205, 25); border-radius: 150px; transform: translateY(32%);";
             document.getElementById('authcontainer').style = "box-shadow: 0 0 400px rgb(61, 205, 25); background-color: rgb(61, 205, 25);";
             document.getElementById('loadericon').style = "opacity: 1; height: 80px;";
-        }, start+=200);
+        }, start+=100);
         setTimeout(() => {
             document.getElementById('authenticator').style = "opacity: 0; transform: scale(1.5);";
             document.getElementById('containator').classList.remove('blur');
