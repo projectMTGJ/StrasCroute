@@ -13,7 +13,7 @@ var checkAuthWhenConnect = function() {
                 for (let i=0; i<=2; i++) {
                     setTimeout(() => {
                         document.getElementById(i.toString()).style = "opacity: 1;"
-                    }, 800 + 400*i);
+                    }, 800 + 300*i);
                 }
                 setTimeout(() => {window.close()}, 5000);
             }
@@ -21,4 +21,4 @@ var checkAuthWhenConnect = function() {
         .catch(error => alert("Il y a un problème veuillez contacter l'Administrateur"+error));
 }
 
-const alwaysCheck = setInterval(() => checkAuthWhenConnect(), 5000);
+const alwaysCheck = setInterval(() => checkAuthWhenConnect(), 10000);
