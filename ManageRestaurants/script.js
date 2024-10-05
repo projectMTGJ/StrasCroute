@@ -72,9 +72,10 @@ const connect = {
             document.getElementById('fieldSetterCode').style = "border: 2px solid rgba(178, 178, 178, 0.6);";
             document.getElementById('authcontainer').style = "box-shadow: 0 0 40px rgb(255, 128, 0); background-color: rgb(87, 87, 87);";
             document.getElementById('personImage').style = "border: 4px solid aliceblue; border-radius: 50px;";
+            document.getElementById('code').value = "";
         }, 2000);
     },
     lock: function() {
-        location.reload();
+        window.close();
     }
 }
