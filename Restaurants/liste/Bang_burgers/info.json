@@ -11,17 +11,13 @@
     "enligne": {
         "ubereats": "https://www.ubereats.com/fr/store/bang-burgers/kbLI9rJJX1mxrJIcR3pMYQ?diningMode=DELIVERY"
     },
-    "darkkitchen": false,
-    "localisation": [
-        {
-            "visited": true,
-            "nom": "Bang Burgers",
-            "adresse": "19 Quai des Pêcheurs, 67000 Strasbourg",
-            "maps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5278.735455983138!2d7.7586349!3d48.5836575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c9840bceefe9%3A0x94559ee0cf13ba4b!2sBang%20Burgers!5e0!3m2!1sfr!2sfr!4v1708276575709!5m2!1sfr!2sfr",
-            "horaires": {
-                "Lundi-Samedi": "11h30-22h",
-                "Dimanche": "18h-22h"
-            }
+    "localisation": {
+        "nom": "Bang Burgers",
+        "adresse": "19 Quai des Pêcheurs, 67000 Strasbourg",
+        "maps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5278.735455983138!2d7.7586349!3d48.5836575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c9840bceefe9%3A0x94559ee0cf13ba4b!2sBang%20Burgers!5e0!3m2!1sfr!2sfr!4v1708276575709!5m2!1sfr!2sfr",
+        "horaires": {
+            "Lundi-Samedi": "11h30-22h",
+            "Dimanche": "18h-22h"
         }
-    ]
+    }
 }
