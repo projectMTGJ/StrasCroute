@@ -55,4 +55,4 @@ const manage = {
 }
 
 // always check
-//const alwaysCheck = setInterval(() => checkAuthWhenConnect(), 10000);
+const alwaysCheck = setInterval(() => checkAuthWhenConnect(), 10000);
