@@ -14,25 +14,25 @@
     <link rel="stylesheet" href="style-ordinateur.css"/>
     <script src="script.js"></script>
 </head>
-<body>
+<body id="body">
 
     <div class="fetchCards">
 
-        <div class="card">
+        <div class="card" id="Bang_burgers-1">
             <div class="image-cont">
-                <img class="vignette" src="liste/Bang_burgers/vignette.jpeg" alt="vignette">
-                <div class="infos-tell">
-                    <div class="name">
-                        Bang Burger
+                <img id="vignetter" class="vignette" src="liste/Bang_burgers/vignette.jpeg" alt="vignette" onclick="usual.hideExternals(); card.show('Bang_burgers-1');">
+                <div class="infos-tell" id="Bang_burgers-1infos">
+                    <div class="name" onclick="usual.hideExternals(); card.show('Bang_burgers-1');">
+                        Bang Burgers
                         <div class="char"></div>
                     </div>
                     <div class="connexions">
-                        <img src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/visibility.png" alt="visibility">
+                        <img onclick="usual.showExternals()" src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/visibility.png" alt="visibility">
                         <img src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/searching.png" alt="gositeweb">
                     </div>
                 </div>
             </div>
-            <div class="description">
+            <div class="description" onclick="usual.hideExternals(); card.show('Bang_burgers-1');" id="Bang_burgers-1description">
                 <div class="infos-pc">
                     <div class="name">
                         Bang Burger
@@ -64,8 +64,14 @@
                         87%
                     </div>
                 </div>
-                <div class="text">
+                <div class="text" id="Bang_burgers-1text">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident ut aspernatur distinctio voluptatibus officia harum illo voluptate, nulla eius repudiandae, maiores nemo, reprehenderit ullam rem numquam reiciendis perferendis sunt deleniti!
+                </div>
+            </div>
+            <div class="doc" id="Bang_burgers-1docu">
+                <div class="separation"></div>
+                <div class="fillinfo" id="Bang_burgers-1fillinfo"> <!-- default, add via JS -->
+
                 </div>
             </div>
         </div>
@@ -126,7 +132,7 @@
 
 
     <!-- default for every pages -->
-    <div class="recherche">
+    <div class="recherche" id="rechercher">
         <div class="main">
             <img src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/magnifying-glass.png" alt="search">
             <input type="text" placeholder="Recherche" name="name" id="search" onkeydown="">
@@ -135,7 +141,7 @@
         <div class="resultats"></div>
     </div>
 
-    <div class="mainBar">
+    <div class="mainBar" id="mainBar">
         <div class="buttons">
             <div class="button" 
                  onclick="window.location.replace('https://projectmtgj.github.io/StrasCroute/')">

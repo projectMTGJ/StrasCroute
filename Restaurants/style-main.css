@@ -42,6 +42,7 @@ body {
         width: 100%;
         align-items: center;
         gap: 5px;
+        transition: ease 0.8s;
         & img {
             height: 25px;
         }
@@ -122,6 +123,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        transition: ease 0.8s;
         & img {
             height: 30px;
         }
