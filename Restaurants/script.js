@@ -47,15 +47,19 @@ const card = {
         const body = document.getElementById('body');
         const card = document.getElementById(which);
         const doc = document.getElementById(`${which}docu`);
-        const vignette = document.getElementById('vignetter');
+        const vignette = document.getElementById('vignetter');``
+        const close = document.getElementById('closebtn');
         const cardDesc = document.getElementById(`${which}description`);
         const cardText = document.getElementById(`${which}text`)
 
-        body.style = "overflow: hidden;";
-        card.style = "cursor: default; border-radius: 0px; z-index: 1; background: rgba(248, 232, 197, 0.8); height: 101vh; width: 100vw; transform: translateY(-63px); border: 0px;";
-        doc.style = "z-index: 2; height: 95vh; opacity: 1;"
-        vignette.style = "height: 400px";
-        cardDesc.style = "opacity: 0;";
-        cardText.style = "opacity: 0; height: 0; margin:0;";
+        usual.showExternals();
+
+        body.style = "";
+        card.style = "";
+        doc.style = ""
+        vignette.style = "";
+        close.style = ""
+        cardDesc.style = "";
+        cardText.style = "";
     }
 }
