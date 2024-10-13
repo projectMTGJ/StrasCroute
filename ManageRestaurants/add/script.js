@@ -9,7 +9,7 @@ var checkAuthWhenConnect = function() {
             else {
                 document.getElementById('containMain').style = "filter: blur(50px);"
                 document.getElementById('forceCloseWindow').style = "opacity: 1; z-index: 9999;"
-                document.getElementById('contentWin').style = "height: 65%; width: 35%;"
+                document.getElementById('contentWin').style = "height: 65%; width: 60%;"
                 for (let i=0; i<=2; i++) {
                     setTimeout(() => {
                         document.getElementById(i.toString()).style = "opacity: 1;"
@@ -21,4 +21,4 @@ var checkAuthWhenConnect = function() {
         .catch(error => alert("Il y a un problème veuillez contacter l'Administrateur"+error));
 }
 
-const alwaysCheck = setInterval(() => checkAuthWhenConnect(), 10000);
+//const alwaysCheck = setInterval(() => checkAuthWhenConnect(), 10000);

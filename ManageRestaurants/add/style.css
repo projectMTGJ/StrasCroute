@@ -22,11 +22,11 @@ body {
         transition: ease 0.6s;
         & .content {
             color: aliceblue;
-            height: 0%;
-            width: 0%;
             background-color: rgb(87, 87, 87);
             box-shadow: 0 0 40px rgba(255, 70, 70, 0.6);
             border-radius: 15px;
+            width: 0;
+            height: 0;
             padding: 10px;
             display: flex;
             flex-direction: column;
@@ -113,7 +113,7 @@ body {
             display: flex;
             align-items: center;
             border-radius: 10px;
-            width: 70%;
+            width: 90%;
             padding: 0;
             font-weight: 500;
             transition: ease 0.2s;
@@ -187,7 +187,7 @@ body {
             &::file-selector-button {
                 font-size: large;
                 font-weight: 600;
-                border: 2px solid rgba(236, 119, 23, 0.1);
+                border: 0;
                 background-color: rgba(255, 226, 188, 0.035);
                 padding: 3px 6px;
                 border-radius: 8px;
@@ -195,10 +195,6 @@ body {
                 transition: ease 0.2s;
             }
             &::file-selector-button:hover {
-                /*special*/
-                border: 2px solid rgba(236, 119, 23, 0.6);
-                background-color: rgba(255, 226, 188, 0.4);
-                transition: ease 0.2s;
                 cursor: pointer;
             }
         }
@@ -211,6 +207,7 @@ body {
                 background-color: transparent;
                 outline: none;
                 transition: ease 0.2s;
+            
                 border-radius: 10px;
                 margin: 2px 0px 7px;
                 font-size: larger;
@@ -239,7 +236,7 @@ body {
             flex-direction: column;
             padding: 10px 10px 10px 10px;
             gap: 10px;
-            width: calc(70% - 20px);
+            width: calc(90% - 20px);
             & input[type=range] { /*haut gauche bas droite*/
                 margin: 2px 10px 7px;
                 width: 100%;
@@ -271,7 +268,7 @@ body {
         }
         & #medaille_contain, #darkkitchen_contain { /*haut gauche bas droite*/
             padding: 2px 6px 7px;
-            width: calc(70% - 8*2px);
+            width: calc(90% - 8*2px);
             gap: 5px;
             cursor: pointer;
             & label {
@@ -295,111 +292,51 @@ body {
         & #locContain {
             display: none;
             flex-direction: column;
-            width: 70%;
-            justify-content: center;
-            align-items: center;
-            & .addcard {
+            width: 90%;
+            & div {
+                width: 100%;
                 display: flex;
                 flex-direction: row;
-                font-size: large;
                 align-items: center;
-                gap: 10px;
-                width: fit-content;
-                margin-right: 8px;
-                margin-bottom: 8px;
-                padding: 8px 50px;
-                font-weight: 500;
-                border: 2px solid rgba(255, 147, 70, 0.2);
-                background-color: rgba(255, 147, 70, 0.035);
-                border-radius: 8px;
-                transition: ease 0.6s;
-                &:hover {
-                    /*special*/
-                    border: 2px solid rgba(255, 147, 70, 1);
-                    background-color: rgba(255, 147, 70, 0.2);
-                    transition: ease 0.2s;
-                    cursor: pointer;
-                }
-                & img {
-                    height: 20px;
-                    width: auto;
-                }
             }
-            & .spetxt {
+            & .speinputtext {
+                border: 1.5px #5252526b solid;
+                border-radius: 6px;
+                padding: 3px 6px;
+            }
+            & .localisationHoraires1 {
+                font-size: large;
+                padding-left: 20px;
+                margin-top: 5px;
+            }
+            & .hor {
+                margin-top: 10px;
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
+                flex-wrap: wrap;
                 align-items: normal;
                 width: 100%;
                 & div {
-                    width: 100%;
                     display: flex;
-                    flex-direction: row;
                     align-items: center;
-                }
-                & .speinputtext {
-                    border: 1.5px #5252526b solid;
-                    border-radius: 6px;
-                    padding: 3px 6px;
-                }
-                & .actions {
-                    display: flex;
-                    flex-direction: row;
-                    font-size: large;
-                    gap: 5px;
+                    margin-left: 30px;
+                    cursor: pointer;
                     width: fit-content;
-                    margin-left: auto;
-                    margin-right: 6px;
-                    margin-bottom: 3px;
-                    padding: 3px 5px;
-                    font-weight: 500;
-                    border: 2px solid rgba(255, 70, 70, 0.2);
-                    background-color: rgba(214, 68, 68, 0.035);
-                    border-radius: 8px;
-                    transition: ease 0.6s;
-                    transform: translateY(-3px);
-                    &:hover {
-                        /*special*/
-                        border: 2px solid rgba(255, 70, 70, 1);
-                        background-color: rgba(214, 68, 68, 0.2);
-                        transition: ease 0.2s;
+                    & input[type=checkbox] {
+                        height: 20px;
+                        width: 20px;
+                        transform: translateY(-3px);
                         cursor: pointer;
                     }
-                    & img {
-                        height: 25px;
-                        width: auto;
+                    & .Horairesinputtext {
+                        border: 1.5px #5252526b solid;
+                        border-radius: 6px;
+                        padding: 3px 6px;
+                        width: 100px;
                     }
-                }
-                & .localisationHoraires1 {
-                    font-size: large;
-                    padding-left: 10px;
-                    margin-top: 5px;
-                }
-                & .hor {
-                    margin-top: 10px;
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                    align-items: normal;
-                    width: 100%;
-                    & div {
-                        display: flex;
-                        align-items: center;
-                        margin-left: 30px;
+                    & label {
                         cursor: pointer;
-                        & input[type=checkbox] {
-                            height: 20px;
-                            width: 20px;
-                            transform: translateY(-3px);
-                            cursor: pointer;
-                        }
-                        & .Horairesinputtext {
-                            border: 1.5px #5252526b solid;
-                            border-radius: 6px;
-                            padding: 3px 6px;
-                            width: 50%;
-                        }
-                        & label {
-                            cursor: pointer;
-                        }
+                        width: 100px;
                     }
                 }
             }
@@ -415,13 +352,15 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        width: 100%;
         & .addcard {
             display: flex;
             flex-direction: row;
             font-size: large;
             align-items: center;
             gap: 10px;
-            width: fit-content;
+            width: 50%;
             margin-right: 8px;
             margin-bottom: 8px;
             padding: 8px 50px;
@@ -456,28 +395,15 @@ body {
             font-size: large;
             align-items: center;
             width: fit-content;
-            padding: 4px 50px;
+            padding: 4px 4px;
             font-weight: 600;
             margin-left: 3px;
             width: 100%;
-            background-color: rgba(255, 147, 70, 0.035);
             border-radius: 8px;
             transition: ease 0.6s;
             font-weight: 600;
             cursor: pointer;
             width: 100%;
-            border: 1.5px solid rgba(63, 63, 63, 0.6);
-            &:active {
-                border: 1.5px solid rgb(236, 113, 13); 
-            }
-        }
-        & .setdate-today {
-            background-color: #6464642f;
-            padding: 4px 22px;
-            border-radius: 8px;
-            font-size: large;
-            font-weight: 600;
-            margin-right: 3px;
         }
     }
 }
