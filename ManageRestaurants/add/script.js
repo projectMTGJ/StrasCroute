@@ -21,8 +21,6 @@ var checkAuthWhenConnect = function() {
         .catch(error => alert("Il y a un problème veuillez contacter l'Administrateur"+error));
 }
 
-//const alwaysCheck = setInterval(() => checkAuthWhenConnect(), 10000);
-
 const manage = {
     addCompo: function(origin) {
         const doc = document.getElementById(`${origin}Liste`);
@@ -55,3 +53,6 @@ const manage = {
         document.getElementById(`${id}value`).innerHTML = document.getElementById(id).value/10;
     }
 }
+
+// always check
+const alwaysCheck = setInterval(() => checkAuthWhenConnect(), 10000);
