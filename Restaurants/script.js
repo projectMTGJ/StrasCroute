@@ -50,9 +50,11 @@ const card = {
         const vignette = document.getElementById('vignetter');``
         const close = document.getElementById('closebtn');
         const cardDesc = document.getElementById(`${which}description`);
-        const cardText = document.getElementById(`${which}text`)
+        const cardText = document.getElementById(`${which}text`);
+        const fillinfo = document.getElementById(`${which}fillinfo`);
 
         usual.showExternals();
+        fillinfo.scrollTo({top: 0});
 
         body.style = "";
         card.style = "";

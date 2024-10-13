@@ -191,20 +191,21 @@
                 & .rating {
                     font-size: large;
                     font-weight: 500;
-                    color: rgb(236, 119, 23);
+                    color: rgb(207, 210, 212);
                     background-color: rgba(0, 0, 0, 0.065);
                     padding: 3px 6px;
                     border-radius: 8px;
                 }
             }
             & .objects {
-                color: aliceblue;
+                color: rgb(207, 210, 212);
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
+                width: 100%;
                 gap: 5px;
                 margin-bottom: 10px;
-                margin-left: 8px;
+                margin-left: 16px;
                 & .boxed {
                     display: flex;
                     flex-direction: row;
@@ -223,7 +224,7 @@
                 }
             }
             & .separation {
-                height: 2px;
+                padding: 1px;
                 width: 90%;
                 background-color: rgba(20,20, 20, 0.3);
                 border-radius: 90px;
@@ -236,6 +237,7 @@
                 width: 100%;
                 gap: 10px;
                 margin-top: 10px;
+                overflow-y: scroll;
                 & .photos {
                     display: flex;
                     flex-direction: row;
@@ -289,6 +291,95 @@
                     & .imgordi {
                         display: none;
                     }
+                }
+                & .localisation {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    & .info {
+                        display: flex;
+                        flex-direction: column;
+                        margin: 10px;
+                        margin-top: 0;
+                        border-radius: 8px;
+                        background-color: rgba(0, 0, 0, 0.065);
+                        padding: 5px 5px;
+                        color: rgb(207, 210, 212);
+                        font-size: small;
+                        font-weight: 400;
+                        gap: 5px;
+                        width: calc(100% - 30px);
+                        & .prcp {
+                            border-radius: 6px;
+                            padding: 3px 6px;
+                            background-color: rgba(0, 0, 0, 0.065); 
+                        }
+                    }
+                    & .map {
+                        margin: 10px;
+                        margin-bottom: 0px;
+                        margin-top: 0;
+                        width: 100%;
+                        & iframe {
+                            width: calc(100% - 20px);
+                            height: 150px;
+                            object-fit: cover;
+                            opacity: 0.9;
+                            border-radius: 8px;
+                            border: 0;
+                        }
+                    }
+                }
+                & .ratesummary {
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    width: calc(100% - 20px);
+                    gap: 4px;
+                    & .bar {
+                        color:rgb(207, 210, 212);
+                        font-size: small;
+                        display: flex;
+                        flex-direction: row;
+                        gap: 2px;
+                        width: 100%;
+                        & .field {
+                            display: flex;
+                            align-items: center;
+                            background-color: rgba(0, 0, 0, 0.065); 
+                        }
+                        & .name {
+                            padding: 5px 10px;
+                            border-radius: 8px 0 0 8px;
+                            min-width: 25%;
+                        }
+                        & .bare {
+                            display: flex;
+                            align-items: center;
+                            justify-content: start;
+                            padding: 2px;
+                            width: 100%;
+                            border-radius: 0 8px 8px 0;
+                            & .colored {
+                                display: flex;
+                                align-items: center;
+                                justify-content: end;
+                                height: 100%;
+                                min-width: 16%;
+                                border-radius: 0 8px 8px 0;
+                                background-color: rgb(236, 119, 23, 0.4);
+                                padding-right: 5px;
+                            }
+                        }
+                    }
+                }
+                & .descriptionlongue {
+                    color: rgb(207, 210, 212);
+                    font-size: small;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    padding-bottom: 35px;
                 }
             }
         }
