@@ -36,10 +36,10 @@ const manage = {
         <input type="file" name="${num}${origin}image" id="${num}${origin}image">
         <input type="text" name="${num}${origin}name" id="${num}${origin}name" placeholder="Nom du plat">
         <input type="text" name="${num}${origin}prix" id="${num}${origin}prix" placeholder="Prix du plat">
-        <fieldset class="note" id="${num}${origin}note">
+        <fieldset class="note">
             <legend>Qualité globale</legend>
-            <div class="top-values-range"><div class="val">0</div><div class="val">1</div><div class="val">2</div><div class="val">3</div><div class="val">4</div><div class="val">5</div></div>
-            <input type="range" min="0" max="50" id="${num}${origin}note" value="0">
+            <input type="range" min="0" max="50" id="${num}${origin}note" value="0" onpointermove="manage.updateCount('${num}${origin}note')">
+            <div class="value" id="${num}${origin}notevalue">0</div>
         </fieldset>
         `;
         doc.appendChild(card);
@@ -55,4 +55,4 @@ const manage = {
 }
 
 // always check
-const alwaysCheck = setInterval(() => checkAuthWhenConnect(), 10000);
+//const alwaysCheck = setInterval(() => checkAuthWhenConnect(), 10000);

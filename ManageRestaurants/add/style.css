@@ -430,7 +430,9 @@ body {
             padding-right: 5px;
             margin-bottom: 5px;
             & img {
-                height: 20px;
+                z-index: 5;
+                cursor: pointer;
+                height: 25px;
                 background-color: rgba(214, 68, 68, 0.1);
                 border: 2px solid rgba(214, 68, 68, 0.2);
                 border-radius: 8px;
