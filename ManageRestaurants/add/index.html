@@ -112,13 +112,13 @@
         </fieldset>
         <fieldset id="qualite_contain">
             <legend>Qualité globale</legend>
-            <div class="top-values-range"><div class="val">0</div><div class="val">1</div><div class="val">2</div><div class="val">3</div><div class="val">4</div><div class="val">5</div><div class="val">6</div><div class="val">7</div><div class="val">8</div><div class="val">9</div><div class="val">10</div></div>
-            <input type="range" min="0" max="100" id="qualite" value="0">
+            <input type="range" min="0" max="100" id="qg" value="0" onpointermove="manage.updateCount('qg')">
+            <div class="value" id="qgvalue">0</div>
         </fieldset>
         <fieldset id="qualite_contain">
             <legend>Rapport Qualité prix Quantité</legend>
-            <div class="top-values-range"><div class="val">0</div><div class="val">1</div><div class="val">2</div><div class="val">3</div><div class="val">4</div><div class="val">5</div><div class="val">6</div><div class="val">7</div><div class="val">8</div><div class="val">9</div><div class="val">10</div></div>
-            <input type="range" min="0" max="100" id="qualite" value="0">
+            <input type="range" min="0" max="100" id="rqpq" value="0" onpointermove="manage.updateCount('rqpq')">
+            <div class="value" id="rqpqvalue">0</div>
         </fieldset>
 
         <div class="titleCat">
@@ -136,16 +136,16 @@
         <fieldset id="locContain" class="spetxt shown">
             <legend>Localisation</legend>
             <div style="margin-top: 5px;">
-                <label for="localisationNom1">Nom:</label>
-                <input class="speinputtext" type="text" name="localisationNom1" id="localisationNom1">
-            </div>
-            <div>
-                <label for="localisationAdresse1">Adresse:</label>
-                <input class="speinputtext" type="text" name="localisationAdresse1" id="localisationAdresse1">
+                <label for="localisationadresse1">Adresse:</label>
+                <input class="speinputtext" type="text" name="localisationadresse1" id="localisationadresse1">
             </div>
             <div>
                 <label for="localisationlgm1">Lien Maps:</label>
                 <input class="speinputtext" type="text" name="localisationlgm1" id="localisationlgm1">
+            </div>
+            <div>
+                <label for="localisationtph1">Télephone:<div class="opt">(optionnel)</div></label>
+                <input class="speinputtext" type="text" name="localisationtph1" id="localisationtph1">
             </div>
             <div class="localisationHoraires1">Horaires: </div>
             <div class="hor">
@@ -193,42 +193,55 @@
             <div class="aft"></div>
         </div>
 
-        <fieldset class="addCardAll" id="entreesListe">
+        <fieldset class="addCardAll">
             <legend>Entrées</legend>
-            <div class="manageEntrees">
-                <div class="addcard">
+            <div class="manageEntrees" id="entreeListe">
+                <div class="addcard" onclick="manage.addCompo('entree');">
                     <img src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/add.png" alt="add">
-                    Ajouter une Carte des Entrées
+                    Entrée
                 </div>
             </div>
         </fieldset>
 
-        <fieldset class="addCardAll" id="platsListe">
+        <fieldset class="addCardAll">
             <legend>Plats</legend>
-            <div class="managePlats">
-                <div class="addcard">
+            <div class="managePlats" id="platListe">
+                <div class="addcard" onclick="manage.addCompo('plat');">
                     <img src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/add.png" alt="add">
-                    Ajouter une Carte de Plats
+                    Plat
+                </div>
+
+                <fieldset class="card" id="plat1">
+                    <legend>Plat n°1 </legend>
+                    <input type="file" name="plat1image" id="plat1image">
+                    <input type="text" name="plat1name" id="plat1name" placeholder="Nom du plat">
+                    <input type="text" name="plat1prix" id="plat1prix" placeholder="Prix du plat">
+                    <fieldset class="note">
+                        <legend>Qualité globale</legend>
+                        <input type="range" min="0" max="50" id="plat1note" value="0" onpointermove="manage.updateCount('plat1note')"> 
+                        <div class="value" id="plat1notevalue">0</div>
+                    </fieldset>
+                </fieldset>
+
+            </div>
+        </fieldset>
+
+        <fieldset class="addCardAll">
+            <legend>Accompagnements</legend>
+            <div class="manageAccompagnement" id="accompagnementListe">
+                <div class="addcard" onclick="manage.addCompo('accompagnement');">
+                    <img src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/add.png" alt="add">
+                    Accompagnement
                 </div>
             </div>
         </fieldset>
 
-        <fieldset class="addCardAll" id="accompagnementListe">
-            <legend>Plats</legend>
-            <div class="manageAccompagnement">
-                <div class="addcard">
-                    <img src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/add.png" alt="add">
-                    Ajouter une Carte d'Accompagnement
-                </div>
-            </div>
-        </fieldset>
-
-        <fieldset class="addCardAll" id="dessertsListe">
+        <fieldset class="addCardAll">
             <legend>Desserts</legend>
-            <div class="manageDesserts">
-                <div class="addcard">
+            <div class="manageDesserts" id="dessertListe">
+                <div class="addcard" onclick="manage.addCompo('dessert');">
                     <img src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/add.png" alt="add">
-                    Ajouter une Carte des Desserts
+                    Dessert
                 </div>
             </div>
         </fieldset>
@@ -251,6 +264,12 @@
             <input type="checkbox" name="medaille" id="medaille">
             <label for="medaille">Médaille</label>
         </fieldset>
+
+        <div class="titleCat">
+            <div class="bef"></div>
+            <div class="name">Validation</div>
+            <div class="aft"></div>
+        </div>
     </div>
 </body>
 </html>
