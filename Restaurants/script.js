@@ -37,7 +37,7 @@ const card = {
 
         body.style = "overflow: hidden;";
         card.style = "cursor: default; border-radius: 0px; z-index: 1; background: rgba(248, 232, 197, 0.8); height: 101vh; width: 100vw; transform: translateY(-63px); border: 0px;";
-        doc.style = "z-index: 2; height: 95vh; opacity: 1;"
+        doc.style = "z-index: 2; height: 95%; opacity: 1; transform: translateY(0%);"
         vignette.style = "height: 400px";
         close.style = "display: flex;"
         cardDesc.style = "opacity: 0;";
@@ -58,7 +58,7 @@ const card = {
 
         body.style = "";
         card.style = "";
-        doc.style = ""
+        doc.style = "transition: ease 0.2s;"
         vignette.style = "";
         close.style = ""
         cardDesc.style = "";
