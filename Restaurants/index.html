@@ -20,20 +20,20 @@
 
         <div class="card" id="Bang_burgers-1">
             <div class="image-cont">
-                <img id="vignetter" class="vignette" src="liste/Bang_burgers/vignette.jpeg" alt="vignette" onclick="usual.hideExternals(); card.show('Bang_burgers-1');">
+                <img id="vignetter" class="vignette" src="liste/Bang_burgers/vignette.jpeg" alt="vignette" onclick="usual.toggleExternals(true); usual.toggleCard('Bang_burgers-1', true);">
                 <div class="infos-tell" id="Bang_burgers-1infos">
-                    <div class="name" onclick="usual.hideExternals(); card.show('Bang_burgers-1');">
+                    <div class="name" onclick="usual.toggleExternals(true); usual.toggleCard('Bang_burgers-1', true);">
                         Bang Burgers
                         <div class="char"></div>
                     </div>
                     <div class="connexions">
                         <img src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/visibility.png" alt="visibility">
                         <img src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/searching.png" alt="gositeweb">
-                        <img onclick="card.close('Bang_burgers-1');" src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/close.png" alt="close" id="closebtn">
+                        <img onclick="usual.toggleCard('Bang_burgers-1', false);" src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/close.png" alt="close" id="closebtn">
                     </div>
                 </div>
             </div>
-            <div class="description" onclick="usual.hideExternals(); card.show('Bang_burgers-1');" id="Bang_burgers-1description">
+            <div class="description" onclick="usual.toggleExternals(true); usual.toggleCard('Bang_burgers-1', true);" id="Bang_burgers-1description">
                 <div class="rate">
                     <div class="verti"></div>
                     <img src="https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/images/ratingStar-filled.png" alt="">
