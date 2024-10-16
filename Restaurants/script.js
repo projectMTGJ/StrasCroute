@@ -1,8 +1,7 @@
 const usual = {
     toggleExternals: function(show) {
-        const translateValue = show ? "0" : "-100px";
-        document.getElementById('rechercher').style.transform = `translateY(${translateValue})`;
-        document.getElementById('mainBar').style.transform = `translateY(${show ? '0' : '100px'})`;
+        document.getElementById('rechercher').style.transform = `translateY(${!show ? "0" : "-100px"})`;
+        document.getElementById('mainBar').style.transform = `translateY(${!show ? '0' : '100px'})`;
     },
     scrollTo: function(id) {
         const targetElement = id === "fc" ? document.body : document.getElementById(id);
