@@ -5,7 +5,6 @@ var checkAuthWhenConnect = function() {
     fetch("https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/ManageRestaurants/token.json")
         .then(response => response.json())
         .then(data => {
-            return;
             if (currentParams.get('auth') == data.key) return;
             else {
                 document.getElementById('containMain').style = "filter: blur(50px);"
