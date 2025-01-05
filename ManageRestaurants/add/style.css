@@ -117,7 +117,7 @@ body {
             padding: 0;
             font-weight: 500;
             transition: ease 0.2s;
-            height: fit-content;
+            height: fit-content; 
             margin-bottom: 20px;
             & legend {
                 display: flex;
@@ -310,8 +310,10 @@ body {
             display: flex !important;
         }
         & .showned {
-            pointer-events: none;
             background-color: #71717154;
+            & input[type=text] {
+                pointer-events: none;
+            }
         }
         & #locContain {
             display: none;
@@ -339,22 +341,25 @@ body {
                 margin-top: 5px;
             }
             & .hor {
-                margin-top: 10px;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                align-items: normal;
+                align-items: center;
                 width: 100%;
+                padding: 10px;
+                gap: 5px;
+                margin-left: 30px;
                 & div {
                     display: flex;
                     align-items: center;
-                    margin-left: 30px;
+                    justify-content: center;
                     cursor: pointer;
                     width: fit-content;
+                    border-radius: 8px;
+                    padding: 2px;
                     & input[type=checkbox] {
                         height: 20px;
                         width: 20px;
-                        transform: translateY(-3px);
                         cursor: pointer;
                     }
                     & .Horairesinputtext {
@@ -362,10 +367,12 @@ body {
                         border-radius: 6px;
                         padding: 3px 6px;
                         width: 100px;
+                        margin: 0px;
                     }
                     & label {
                         cursor: pointer;
                         width: 100px;
+                        transform: translateY(0px);
                     }
                 }
             }
@@ -472,6 +479,8 @@ body {
                 padding: 10px 10px 10px 10px;
                 gap: 10px;
                 margin-bottom: 0;
+                margin-top: 10px;
+                border: none;
                 & .value {
                     display: flex;
                     align-items: center;
