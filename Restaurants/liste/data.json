@@ -1,0 +1,31 @@
+[
+    { 
+        "name": "Bang Burger",
+        "key-words": "",    
+        "type": "Burger smashés",
+        "cost": [11, 14],
+        "enligne": ["ubereats"],
+        "localisation": {
+            "adresse": "19 Quai des Pêcheurs, 67000 Strasbourg",
+            "horaires": {
+                "Lundi-Samedi": "11h30-22h",
+                "Dimanche": "18h-22h"
+            }
+        }
+    },
+    {
+        "name": "Starling Centre",
+        "key-words": "",  
+        "type": "Burger",
+        "cost": [13, 16],
+        "enligne": [],
+        "localisation": {
+            "adresse": "7 rue Hannong, 67000 Strasbourg",
+            "horaires": {
+                "Dimanche-Jeudi": "12h-14h / 18h-22h",
+                "Vendredi": "12h-14h / 18h-00h",
+                "Samedi": "12h-00h"
+            }
+        }
+    }
+]

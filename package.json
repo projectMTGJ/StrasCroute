@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "fs.js": "^0.0.1",
+    "fuse.js": "^7.0.0"
+  }
+}
