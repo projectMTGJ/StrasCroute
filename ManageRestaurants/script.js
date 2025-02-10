@@ -1,6 +1,3 @@
-const fs = require("fs"); // Module pour lire des fichiers
-const Fuse = require("fuse.js"); // Importation de Fuse.js
-
 var endRefuse;
 const connect = {
     joinCreatedLink: function(call) {
@@ -32,29 +29,30 @@ const connect = {
     },
     open: function(start=400) {
         endRefuse && clearTimeout(endRefuse);
-        ['fieldSetterCode','ButtonCodeSend'].forEach(el => {document.getElementById(el).style = "opacity: 0;"})
+        ['fieldSetterPassword', 'fieldSetterUsername', 'ButtonCodeSend'].forEach(el => {document.getElementById(el).style = "opacity: 0;"})
         setTimeout(() => {
             document.getElementById('personImage').style = "border: 0 solid rgb(61, 205, 25); border-radius: 150px; transform: translateY(32%);";
-            document.getElementById('authcontainer').style = "box-shadow: 0 0 400px rgb(61, 205, 25); background-color: rgb(61, 205, 25);";
+            document.getElementById('authcontainer').style = "box-shadow: 0 0 400px rgb(61, 205, 25); background-color: rgb(61, 205, 25); border: 0px rgba(0, 0, 0, 0) solid;";
             document.getElementById('loadericon').style = "opacity: 1; height: 80px;";
         }, start+=100);
         setTimeout(() => {
             document.getElementById('authenticator').style = "opacity: 0; transform: scale(1.5);";
-            document.getElementById('containator').classList.remove('blur');
+            document.getElementById('blur').style = "opacity: 0";
         }, start+=1500);
         setTimeout(() => {
             document.getElementById('authenticator').style = "display: none;";
-            document.getElementById('containator').classList.remove('blur');
             document.getElementById('containator').style = "z-index: 9999;";
         }, start+=400);
     },
     refuse: function() {
-        document.getElementById('fieldSetterCode').style = "border: 2px solid rgba(255, 70, 70, 0.6);";
+        document.getElementById('fieldSetterPassword').style = "border: 2px solid rgba(255, 70, 70, 0.6);";
+        document.getElementById('fieldSetterUsername').style = "border: 2px solid rgba(255, 70, 70, 0.6);";
         document.getElementById('authcontainer').style = "box-shadow: 0 0 400px rgb(255, 70, 70); background-color: rgb(155, 70, 70);";
         document.getElementById('personImage').style = "border: 4px solid rgb(255, 70, 70); border-radius: 160px; box-shadow: 0 0 200px rgb(255, 70, 70);";
         endRefuse = setTimeout(() => {
-            document.getElementById('fieldSetterCode').style = "border: 2px solid rgba(178, 178, 178, 0.6);";
-            document.getElementById('authcontainer').style = "box-shadow: 0 0 40px rgb(255, 128, 0); background-color: rgb(87, 87, 87);";
+            document.getElementById('fieldSetterUsername').style = "border: 2px solid rgba(178, 178, 178, 0.6);";
+            document.getElementById('fieldSetterPassword').style = "border: 2px solid rgba(178, 178, 178, 0.6);";
+            document.getElementById('authcontainer').style = "box-shadow: 0 0 0px rgba(0, 0, 0, 0); background-color: rgba(0, 0, 0, 0);";
             document.getElementById('personImage').style = "border: 4px solid aliceblue; border-radius: 50px;";
             document.getElementById('code').value = "";
         }, 2000);
