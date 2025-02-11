@@ -14,7 +14,7 @@ const connect = {
         fetch("https://raw.githubusercontent.com/projectMTGJ/StrasCroute/master/ManageRestaurants/token.json")
             .then(response => response.json())
             .then(data => {
-                if (document.getElementById('code').value == data.key) this.open();
+                if (document.getElementById('code').value == data.key && document.getElementById('username').value == data.username) this.open();
                 else this.refuse();
             })
             .catch(error => console.error('Error fetching the token:', error));
