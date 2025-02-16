@@ -45,14 +45,14 @@ const connect = {
         }, start+=400);
     },
     refuse: function() {
-        document.getElementById('fieldSetterPassword').style = "border: 2px solid rgba(255, 70, 70, 0.6);";
-        document.getElementById('fieldSetterUsername').style = "border: 2px solid rgba(255, 70, 70, 0.6);";
-        document.getElementById('authcontainer').style = "box-shadow: 0 0 400px rgb(255, 70, 70); background-color: rgb(155, 70, 70);";
+        document.getElementById('fieldSetterPassword').style = "border: 2px solid rgba(255, 70, 70, 0.8);";
+        document.getElementById('fieldSetterUsername').style = "border: 2px solid rgba(255, 70, 70, 0.8);";
+        document.getElementById('authcontainer').style = "box-shadow: 0 0 400px rgb(255, 70, 70); background-color: rgb(209, 55, 55); border: 2px solid rgba(255, 70, 70, 0.8);";
         document.getElementById('personImage').style = "border: 4px solid rgb(255, 70, 70); border-radius: 160px; box-shadow: 0 0 200px rgb(255, 70, 70);";
         endRefuse = setTimeout(() => {
             document.getElementById('fieldSetterUsername').style = "border: 2px solid rgba(178, 178, 178, 0.6);";
             document.getElementById('fieldSetterPassword').style = "border: 2px solid rgba(178, 178, 178, 0.6);";
-            document.getElementById('authcontainer').style = "box-shadow: 0 0 0px rgba(0, 0, 0, 0); background-color: rgba(0, 0, 0, 0);";
+            document.getElementById('authcontainer').style = "box-shadow: 0 0 0px rgba(0, 0, 0, 0); background-color: rgba(0, 0, 0, 0); border: 2px rgb(46, 99, 127) solid;";
             document.getElementById('personImage').style = "border: 4px solid aliceblue; border-radius: 50px;";
             document.getElementById('code').value = "";
         }, 2000);
